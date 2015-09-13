@@ -1,0 +1,23 @@
+<header>
+  <img src="yologo.png">
+  <i class="fa fa-bars fa-2x"></i>
+</header>
+
+<div class="jumbotron">
+  <div class="filter">
+    <h1> <small>Le site de</small></br> Yoan Dieu<h1>
+  </div>
+</div>
+
+<main>
+  <div class="container">
+    <article class="aPropos">
+      <h1> <%= @project.title %> </h1>
+      <div class="thumb" style="backgroundColor: <%= @project.thumb %>" %>
+      <p><%= @project.descrition %></p>
+      <div class="source">
+        <p>Auteur, <span> <%= @project.created_at.strftime("%d %b, %Y") %></span></p>
+      </div>
+    </article>
+  </div>
+</main>
