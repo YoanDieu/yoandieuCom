@@ -1,11 +1,4 @@
 <h1>New User</h1>
-<%= @user.errors.to_hash %>
-<%= form_tag '/users', method: 'post' do %>
-  <input type="text" name="name">
-  <input type="password" name="password">
-  <input type="submit" value="Creer un compte">
-<% end %>
+<%= render 'form' %>
 
-
-
-<%= link_to 'Back', 'admin/users' %>
+<%= link_to 'Back', users_path %>
