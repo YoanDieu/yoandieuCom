@@ -28,8 +28,8 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to @user, notice: 'User was successfully created.' }
-        format.json { render :show, status: :created, location: @user }
+        format.html { redirect_to 'admin/users', notice: 'User was successfully created.' }
+        format.json { render :show, status: :created, location: 'admin/users' }
       else
         format.html { render :new }
         format.json { render json: @user.errors, status: :unprocessable_entity }
@@ -40,10 +40,11 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
   def update
+    @user = User.find(params[:id])
     respond_to do |format|
       if @user.update(user_params)
-        format.html { redirect_to @user, notice: 'User was successfully updated.' }
-        format.json { render :show, status: :ok, location: @user }
+        format.html { redirect_to "/admin/users/#{@user.id}", notice: 'User was successfully updated.' }
+        format.json { render :show, status: :ok, location: "/admin/users/#{@user.id}" }
       else
         format.html { render :edit }
         format.json { render json: @user.errors, status: :unprocessable_entity }

@@ -1,5 +1,15 @@
 Rails.application.routes.draw do
-  resources :users
+  #resources :users
+
+  get 'admin/users' => 'users#index'
+  post 'admin/users'=> "users#create"
+  get 'admin/users/new' => "users#new"
+  get 'admin/users/:id/edit' => "users#edit"
+  get 'admin/users/:id' => "users#show"
+  patch 'admin/users/:id' => "users#update"
+  put 'admin/users/:id' => "users#update"
+  delete 'admin/users/:id' => "users#destroy"
+
   root 'pages#home'
 
 
