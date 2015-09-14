@@ -24,10 +24,10 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.json
   def create
-    @user = User.create name: params(:name), password_digest: params(:password)
+    @user = User.new name: params[:user][:name], password: params[:user][:password]
 
     respond_to do |format|
-      if @user.create
+      if @user.save
         format.html { redirect_to @user, notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: @user }
       else
