@@ -1,1 +1,16 @@
 <h1>Curiculum</h1>
+
+<h2> Formations : </h2>
+<% @formations.each do |formation| %>
+  <p> <%= formation.name %> </p>
+<% end %>
+
+<h2> Expériences : </h2>
+<% @experiences.each do |experience| %>
+  <p> <%= experience.position %> </p>
+<% end %>
+
+<h2> Activités : </h2>
+<% @activities.each do |activity| %>
+  <p> <%= activity.title %> </p>
+<% end %>

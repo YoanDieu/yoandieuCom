@@ -8,6 +8,9 @@ class PagesController < ApplicationController
   end
 
   def curiculum
+    @formations = Formation.all
+    @experiences = Experience.all
+    @activities = Activity.all
   end
 
   def contact
