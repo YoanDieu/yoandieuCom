@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   #put 'admin/users/:id' => "users#update"
   #delete 'admin/users/:id' => "users#destroy"
   get '/admin' => "pages#admin"
-  post '/admin' => "pages#admin"
+  post '/log_in' => "pages#log_in"
 
   root 'pages#home'
 

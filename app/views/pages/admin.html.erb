@@ -1,5 +1,5 @@
-<form action="/admin" method="post">
+<%= form_tag "/log_in", method: :post do %>
   <input type="text" name="name">
   <input type="password" name="password">
   <input type="submit" value="Se connecter">
-</form>
+<% end %>

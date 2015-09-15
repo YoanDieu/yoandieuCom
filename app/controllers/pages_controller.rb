@@ -4,7 +4,11 @@ class PagesController < ApplicationController
   end
 
   def admin
-    user = User.where(name: params[:name]).first.try(authenticate: params[:password])
+
+  end
+
+  def log_in
+    user = User.find_by(name: params[:name])
 
     if user && user.authenticate(params[:password])
       redirect_to '/admin/users'
