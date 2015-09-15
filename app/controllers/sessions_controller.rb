@@ -11,7 +11,7 @@ def create
     session[:user_id] = user.id
     redirect_to '/admin/users'
   else
-    render 'admin'
+    redirect_to '/admin'
   end
 end
 
