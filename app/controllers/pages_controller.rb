@@ -4,13 +4,13 @@ class PagesController < ApplicationController
   end
 
   def admin
-
   end
 
   def log_in
     user = User.find_by(name: params[:name])
 
     if user && user.authenticate(params[:password])
+      session[:user_id] = user.id
       redirect_to '/admin/users'
     else
       render 'admin'
