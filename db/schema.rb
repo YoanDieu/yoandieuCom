@@ -11,7 +11,43 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150915170933) do
+ActiveRecord::Schema.define(version: 20150915212915) do
+
+  create_table "activities", force: :cascade do |t|
+    t.string   "title"
+    t.string   "type"
+    t.string   "institution"
+    t.string   "description"
+    t.string   "github"
+    t.string   "twitter"
+    t.string   "url"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "experiences", force: :cascade do |t|
+    t.string   "position"
+    t.string   "company"
+    t.string   "startdate"
+    t.string   "enddate"
+    t.string   "location"
+    t.text     "duties"
+    t.string   "url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "formations", force: :cascade do |t|
+    t.string   "name"
+    t.string   "institution"
+    t.string   "startdate"
+    t.string   "enddate"
+    t.text     "skills"
+    t.string   "certificate"
+    t.string   "url"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "projects", force: :cascade do |t|
     t.string   "title"

@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :activities, path:"/admin/activities"
+  resources :formations, path:"/admin/formations"
+  resources :experiences, path:"/admin/experiences"
   resources :projects, path:"/admin/projects"
   resources :users, path:"/admin/users"
 
