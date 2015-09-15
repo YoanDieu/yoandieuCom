@@ -1,6 +1,7 @@
 <h1> Projets </h1>
 
-<%= @projects.each do |project| %>
+<ul>
+<% @projects.each do |project| %>
 <artcile class="projet">
   <h1> <%= project.title %> </h1>
   <img style="width:500px; height:300px" src="assets/<%=project.thumb%>">
@@ -16,3 +17,4 @@
 
 </article>
 <% end %>
+</ul>
