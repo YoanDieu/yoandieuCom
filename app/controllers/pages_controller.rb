@@ -3,6 +3,16 @@ class PagesController < ApplicationController
   @project = Project.find(1)
   end
 
+  def projects
+    @projects = Project.all
+  end
+
+  def curiculum
+  end
+
+  def contact
+  end
+
   def admin
   end
 
