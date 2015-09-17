@@ -166,6 +166,7 @@ nav.rightMenu {
     h1 {
       display: inline-block;
       position: absolute;
+      font-family: 'Roboto Slab', serif;
       left: 20px;
       top: 15px;
       vertical-align: middle;
@@ -193,6 +194,7 @@ nav.rightMenu {
 
         li {
           position: relative;
+          font-family: 'Roboto Slab', serif;
           display: none;
           width: 5%;
           vertical-align: middle;
@@ -228,6 +230,7 @@ nav.rightMenu {
           li {
             display: block;
             position: relative;
+            font-family: 'Roboto Slab', serif;
             width: 100%;
             background-color: rgba(0,0,0,0);
             color: white;
