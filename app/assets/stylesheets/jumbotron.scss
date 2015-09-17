@@ -12,34 +12,34 @@ div.jumbotron{
   overflow: hidden;
   box-sizing: border-box;
 
+  h1 {
+    position: relative;
+    color: white;
+    font-weight: bold;
+    font-size: 110px;
+    vertical-align: middle;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+    text-shadow: 2px 2px 2px  rgba(0,0,0, 0.6);
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 0.7;
+    span.cyan {
+      color: #06aae7;
+    }
+  }
+
   div.filter {
     position: absolute;
     width: 100%;
-    min-height: 300px;
-    background-color: rgba(0,183,210, 0.0);
+    bottom: 0px;
+    height: 70px;
+    background-color: rgba(0,0,0, 0.5);
     padding: 15px;
     box-sizing: border-box;
     z-index: 1;
-
-    h1 {
-      position: relative;
-      color: white;
-      font-weight: bold;
-      font-size: 110px;
-      vertical-align: middle;
-      width: 90%;
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: 10px;
-      text-shadow: 2px 2px 2px  rgba(0,0,0, 0.6);
-      text-align: center;
-      text-transform: uppercase;
-      line-height: 0.7;
-      small {
-        font-size: 30px;
-        text-transform: rgba(0,183,210, 0.01);
-      }
-    }
   }
 }
 
@@ -49,14 +49,64 @@ main{
   width: 100%;
 }
 
-@media all and (min-width: 1001px) {
+@media all and (min-width: 600px) and (max-width: 1000px) {
   div.jumbotron{
-    min-height: 600px;
+    min-height: 400px;
+
+    h1 {
+      margin-top: 120px;
+    }
+
+    div.filter {
+      height: 100px;
+    }
   }
 
   main{
     position: absolute;
-    margin-top: 650px;
+    margin-top: 450px;
+    width: 100%;
+  }
+
+}
+
+@media all and (min-width: 1001px) and (max-width: 1559px) {
+  div.jumbotron{
+    min-height: 500px;
+
+    h1 {
+      margin-top: 180px;
+    }
+
+    div.filter {
+      height: 120px;
+    }
+  }
+
+  main{
+    position: absolute;
+    margin-top: 550px;
+    width: 100%;
+  }
+
+}
+
+
+@media all and (min-width: 1560px) {
+  div.jumbotron{
+    min-height: 700px;
+
+    h1 {
+      margin-top: 270px;
+    }
+    div.filter {
+      height: 180px;
+    }
+  }
+
+  main{
+    position: absolute;
+    margin-top: 750px;
     width: 100%;
   }
 
