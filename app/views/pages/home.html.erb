@@ -1,19 +1,17 @@
 <%= render 'menu' %>
 
-<div class="jumbotron">
-  <div class="filter">
-    <h1> <small>Le site de</small></br> YO<h1>
-  </div>
-</div>
+<%= render 'jumbotron' %>
 
 <main>
   <div class="container">
     <article class="aPropos">
       <h1> <%= @project.title %> </h1>
-      <div class="thumb" style="backgroundColor: <%= @project.thumb %>" %>
+      <div class="thumb">
+      <img src="assets/<%= @project.thumb %>">
+      </div>
       <p><%= @project.description %></p>
       <div class="source">
-        <p>Auteur, <span> <%= @project.created_at.strftime("%d %b, %Y") %></span></p>
+        <p>Yoan, <span> <%= @project.created_at.strftime("%d %b, %Y") %></span></p>
       </div>
     </article>
   </div>

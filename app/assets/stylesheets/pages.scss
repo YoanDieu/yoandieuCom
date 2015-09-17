@@ -10,49 +10,6 @@ div.filter {
   box-sizing: border-box;
 }
 
-
-div.jumbotron{
-  display: block;
-  width: 100%;
-  min-height: 200px;
-
-  background-size: cover;
-  box-sizing: border-box;
-  z-index: 0;
-  overflow: hidden;
-  box-sizing: border-box;
-
-  div.filter {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,183,210, 0.0);
-    padding: 15px;
-    box-sizing: border-box;
-
-    h1 {
-      position: relative;
-      color: white;
-      font-weight: bold;
-      font-size: 110px;
-      vertical-align: middle;
-      width: 90%;
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: 10px;
-      text-shadow: 2px 2px 2px  rgba(0,0,0, 0.6);
-      text-align: center;
-      text-transform: uppercase;
-      line-height: 0.7;
-      small {
-        font-size: 30px;
-        text-transform: rgba(0,183,210, 0.01);
-      }
-    }
-  }
-}
-
-
 main {
   display: block;
   padding-top: 20px;
@@ -69,9 +26,10 @@ main {
       width: 100%;
       box-sizing: border-box;
       padding: 8%;
-      background-color: rgba(0,0,0,0.8);
-      border-radius: 15px;
-      /*box-shadow: inset 0px 0px 10px rgba(255,255,255,0.7);*/
+      background-color: none;
+      border-top: 1px solid grey;
+      border-bottom: 1px solid grey;
+      color: #333332;
 
       h1{
         font-size: 20px;
@@ -82,14 +40,20 @@ main {
 
       }
 
-      div.thum {
+      div.thumb {
         display: block;
-        position: relative;
         width: 100%;
-        height: 100px;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 20px;
+        height: 150px;
+        overflow: hidden;
+
+        img {
+          display: block;
+          position: relative;
+          width: 100%;
+          margin-left: auto;
+          margin-right: auto;
+          margin-bottom: 20px;
+        }
       }
 
       p{
@@ -131,11 +95,13 @@ main {
 
     div.container {
 
-      article{
+      article.aPropos{
         width: 50%;
         margin-left: auto;
         margin-right: auto;
         padding: 6%;
+
+
       }
     }
   }
@@ -143,26 +109,26 @@ main {
 
 @media all and (min-width: 1001px) {
 
-    div.jumbotron{
-      div.filter {
-        h1 {
-          margin-top: 50px;
-          margin-bottom: 100px;
-        }
-      }
-    }
-
 
   main {
 
     div.container {
 
       article{
-        width: 30%;
+
+        width: 50%;
         margin-left: auto;
         margin-right: auto;
         margin-bottom: 170px;
-        padding: 4%;
+        padding: 2%;
+
+        p {
+          font-size: 18px;
+        }
+
+        div.thumb {
+          height: 350px;
+        }
       }
     }
   }
