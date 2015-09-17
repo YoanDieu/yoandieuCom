@@ -193,7 +193,7 @@ nav.rightMenu {
 
         li {
           position: relative;
-          display: inline-block;
+          display: none;
           width: 5%;
           vertical-align: middle;
           height: 100%;
@@ -242,14 +242,16 @@ nav.rightMenu {
         }
 
       }
-
-
-
     }
   }
 
   nav.rightMenu {
     display: none;
+    border: none;
+    a{
+      display: none;
+    }
+
   }
 
 }
