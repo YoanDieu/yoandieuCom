@@ -40,6 +40,35 @@ div.jumbotron{
     padding: 15px;
     box-sizing: border-box;
     z-index: 1;
+    text-align: left;
+    padding-left: 10px;
+    padding-top: 10px;
+
+    h2 {
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      margin: 0;
+      text-align: left;
+      width: auto;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    p {
+      color: white;
+      margin: 0;
+      font-size: 14px;
+
+      a{
+        color: white;
+        cursor: pointer;
+
+        &:hover{
+          color: #06aae7;
+        }
+      }
+    }
   }
 }
 
@@ -54,6 +83,42 @@ main.noJumbotron {
 
 }
 
+@media all and (min-width: 320px) and (max-width: 599px) {
+    div.jumbotron{
+      min-height: 350px;
+
+      h1 {
+        margin-top: 90px;
+      }
+
+      div.filter {
+        height: 120px;
+        margin-top: -20px;
+
+        h2 {
+          font-size: 22px;
+          margin-top: 0px;
+        }
+
+        p{
+          font-size: 18px;
+        }
+      }
+    }
+
+    main{
+      position: absolute;
+      margin-top: 400px;
+      width: 100%;
+    }
+
+    main.noJumbotron {
+      margin-top: 100px;
+
+    }
+}
+
+
 
 @media all and (min-width: 600px) and (max-width: 1000px) {
   div.jumbotron{
@@ -65,6 +130,16 @@ main.noJumbotron {
 
     div.filter {
       height: 100px;
+      margin-top: -20px;
+
+      h2 {
+        font-size: 22px;
+        margin-top: 0px;
+      }
+
+      p{
+        font-size: 18px;
+      }
     }
   }
 
