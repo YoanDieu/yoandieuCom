@@ -2,9 +2,30 @@
   <a class="home" href="/"><h1>yoan<span class="cyan">dieu</span></h1></a>
   <nav class="topMenu" id="topMenu">
     <ul>
-      <a href="/projects" id="link1"><li>Projets</li></a>
-      <a href="/curiculum" id="link2"><li>Curiculum</li></a>
-      <a href="/contact" id="link3"><li>Contact</li></a>
+      <% if @home == true %>
+        <a href="/"class="active"><li>Accueil</li></a>
+      <% else %>
+      <a href="/"><li>Accueil</li></a>
+      <% end %>
+
+      <% if @pro == true %>
+        <a class="active" href="/projects"><li>Projets</li></a>
+      <% else %>
+        <a href="/projects"><li>Projets</li></a>
+      <% end %>
+
+      <% if @curi == true %>
+        <a class="active" href="/curiculum"><li>Curiculum</li></a>
+      <% else %>
+        <a href="/curiculum"><li>Curiculum</li></a>
+      <% end %>
+
+      <% if @cont == true %>
+      <a class="active" href="/contact"><li>Contact</li></a>
+      <% else %>
+      <a href="/contact"><li>Contact</li></a>
+      <% end %>
+
       <li id="burgerBtn"><i class="fa fa-bars fa-2x"></i></li>
     </ul>
   </nav>

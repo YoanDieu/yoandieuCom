@@ -1,19 +1,24 @@
 class PagesController < ApplicationController
   def home
-  @project = Project.find(1)
+    @home = true
+    @pro = false
+    @project = Project.find(1)
   end
 
   def projects
+    @pro = true
     @projects = Project.all
   end
 
   def curiculum
+    @curi = true
     @formations = Formation.all
     @experiences = Experience.all
     @activities = Activity.all
   end
 
   def contact
+    @cont = true
   end
 
   def admin

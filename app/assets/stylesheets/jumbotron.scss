@@ -21,7 +21,7 @@ div.jumbotron{
     width: 90%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 80px;
+    margin-top: 60px;
     text-shadow: 2px 2px 2px  rgba(0,0,0, 0.6);
     text-align: center;
     text-transform: uppercase;
@@ -35,14 +35,16 @@ div.jumbotron{
     position: absolute;
     width: 100%;
     bottom: 0px;
-    height: 70px;
+    height: 120px;
     background-color: rgba(0,0,0, 0.5);
     padding: 15px;
     box-sizing: border-box;
     z-index: 1;
     text-align: left;
-    padding-left: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
     padding-top: 10px;
+    text-align: justify;
 
     h2 {
       color: white;
@@ -59,6 +61,10 @@ div.jumbotron{
       color: white;
       margin: 0;
       font-size: 14px;
+
+      strong {
+        font-weight: bolder;
+      }
 
       a{
         color: white;
@@ -96,12 +102,12 @@ main.noJumbotron {
         margin-top: -20px;
 
         h2 {
-          font-size: 22px;
+          font-size: 18px;
           margin-top: 0px;
         }
 
         p{
-          font-size: 18px;
+          font-size: 15px;
         }
       }
     }
@@ -130,15 +136,16 @@ main.noJumbotron {
 
     div.filter {
       height: 100px;
-      margin-top: -20px;
+      padding-top: 15px;
+      padding-left: 30px;
 
       h2 {
-        font-size: 22px;
+        font-size: 20px;
         margin-top: 0px;
       }
 
       p{
-        font-size: 18px;
+        font-size: 15px;
       }
     }
   }
@@ -167,6 +174,8 @@ main.noJumbotron {
 
     div.filter {
       height: 120px;
+      padding-top: 30px;
+      padding-left: 90px;
     }
   }
 
@@ -194,6 +203,17 @@ main.noJumbotron {
     }
     div.filter {
       height: 180px;
+      padding-left: 250px;
+      padding-right: 30px;
+      padding-top: 60px;
+
+      h2 {
+        font-size: 28px;
+      }
+
+      p {
+        font-size: 20px;
+      }
     }
   }
 

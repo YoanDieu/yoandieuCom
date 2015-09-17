@@ -265,9 +265,25 @@ nav.rightMenu {
           margin-right: -5px;
           text-decoration: none;
 
+          &.active {
+            background-color: white;
+
+            li {
+              color: #06aae7;
+            }
+          }
+
           &:hover{
             background-color: #06aae7;
+            &.active {
+              background-color: #06aae7;
+              li {
+                color: white;
+              }
+            }
           }
+
+
 
           li {
             display: block;
