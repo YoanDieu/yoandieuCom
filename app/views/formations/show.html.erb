@@ -1,41 +1,42 @@
 <%= render 'admin_menu' %>
 
 <p id="notice"><%= notice %></p>
+<main class="noJumbotron">
+  <p>
+    <strong>Name:</strong>
+    <%= @formation.name %>
+  </p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @formation.name %>
-</p>
+  <p>
+    <strong>Institution:</strong>
+    <%= @formation.institution %>
+  </p>
 
-<p>
-  <strong>Institution:</strong>
-  <%= @formation.institution %>
-</p>
+  <p>
+    <strong>Startdate:</strong>
+    <%= @formation.startdate %>
+  </p>
 
-<p>
-  <strong>Startdate:</strong>
-  <%= @formation.startdate %>
-</p>
+  <p>
+    <strong>Enddate:</strong>
+    <%= @formation.enddate %>
+  </p>
 
-<p>
-  <strong>Enddate:</strong>
-  <%= @formation.enddate %>
-</p>
+  <p>
+    <strong>Skills:</strong>
+    <%= @formation.skills %>
+  </p>
 
-<p>
-  <strong>Skills:</strong>
-  <%= @formation.skills %>
-</p>
+  <p>
+    <strong>Certificate:</strong>
+    <%= @formation.certificate %>
+  </p>
 
-<p>
-  <strong>Certificate:</strong>
-  <%= @formation.certificate %>
-</p>
+  <p>
+    <strong>Url:</strong>
+    <%= @formation.url %>
+  </p>
 
-<p>
-  <strong>Url:</strong>
-  <%= @formation.url %>
-</p>
-
-<%= link_to 'Edit', edit_formation_path(@formation) %> |
-<%= link_to 'Back', formations_path %>
+  <%= link_to 'Edit', edit_formation_path(@formation) %> |
+  <%= link_to 'Back', formations_path %>
+</main>

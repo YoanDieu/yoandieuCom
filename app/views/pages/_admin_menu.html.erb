@@ -1,6 +1,7 @@
 <header>
   <a class="home" href="/admin"><h1>yoan<span class="cyan">admin</span></h1></a>
   <nav class="topMenu" id="topMenu">
+    <% if @user && @user.role == "Admin"%>
     <ul>
       <a href="/"><li>Retour au site</li></a>
       <a href="/admin/projects"><li>Projets</li></a>
@@ -11,6 +12,7 @@
 
       <li id="burgerBtn"><i class="fa fa-bars fa-2x"></i></li>
     </ul>
+    <% end %>
   </nav>
 
 </header>

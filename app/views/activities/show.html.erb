@@ -2,40 +2,42 @@
 
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @activity.title %>
-</p>
+<main class="noJumbotron">
+  <p>
+    <strong>Title:</strong>
+    <%= @activity.title %>
+  </p>
 
-<p>
-  <strong>Type:</strong>
-  <%= @activity.type %>
-</p>
+  <p>
+    <strong>Type:</strong>
+    <%= @activity.type %>
+  </p>
 
-<p>
-  <strong>Institution:</strong>
-  <%= @activity.institution %>
-</p>
+  <p>
+    <strong>Institution:</strong>
+    <%= @activity.institution %>
+  </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @activity.description %>
-</p>
+  <p>
+    <strong>Description:</strong>
+    <%= @activity.description %>
+  </p>
 
-<p>
-  <strong>Github:</strong>
-  <%= @activity.github %>
-</p>
+  <p>
+    <strong>Github:</strong>
+    <%= @activity.github %>
+  </p>
 
-<p>
-  <strong>Twitter:</strong>
-  <%= @activity.twitter %>
-</p>
+  <p>
+    <strong>Twitter:</strong>
+    <%= @activity.twitter %>
+  </p>
 
-<p>
-  <strong>Url:</strong>
-  <%= @activity.url %>
-</p>
+  <p>
+    <strong>Url:</strong>
+    <%= @activity.url %>
+  </p>
 
-<%= link_to 'Edit', edit_activity_path(@activity) %> |
-<%= link_to 'Back', activities_path %>
+  <%= link_to 'Edit', edit_activity_path(@activity) %> |
+  <%= link_to 'Back', activities_path %>
+</main>

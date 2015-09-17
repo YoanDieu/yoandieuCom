@@ -1,16 +1,17 @@
 <%= render 'admin_menu' %>
 
 <p id="notice"><%= notice %></p>
+<main class="noJumbotron">
+  <p>
+    <strong>Name:</strong>
+    <%= @user.name %>
+  </p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @user.name %>
-</p>
+  <p>
+    <strong>Role:</strong>
+    <%= @user.role %>
+  </p>
 
-<p>
-  <strong>Role:</strong>
-  <%= @user.role %>
-</p>
-
-<%= link_to 'Edit', "/admin/users/#{@user.id}/edit" %>
-<%= link_to 'Back', "/admin/users" %>
+  <%= link_to 'Edit', "/admin/users/#{@user.id}/edit" %>
+  <%= link_to 'Back', "/admin/users" %>
+</main>

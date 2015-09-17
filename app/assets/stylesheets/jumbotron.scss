@@ -49,6 +49,12 @@ main{
   width: 100%;
 }
 
+main.noJumbotron {
+  margin-top: 100px;
+
+}
+
+
 @media all and (min-width: 600px) and (max-width: 1000px) {
   div.jumbotron{
     min-height: 400px;
@@ -67,6 +73,12 @@ main{
     margin-top: 450px;
     width: 100%;
   }
+
+  main.noJumbotron {
+    margin-top: 200px;
+
+  }
+
 
 }
 
@@ -89,6 +101,12 @@ main{
     width: 100%;
   }
 
+  main.noJumbotron {
+    margin-top: 200px;
+
+  }
+
+
 }
 
 
@@ -108,6 +126,11 @@ main{
     position: absolute;
     margin-top: 750px;
     width: 100%;
+  }
+
+  main.noJumbotron {
+    margin-top: 200px;
+
   }
 
 }

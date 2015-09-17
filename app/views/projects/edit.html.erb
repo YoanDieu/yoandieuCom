@@ -1,8 +1,9 @@
 <%= render 'admin_menu' %>
+<main class="noJumbotron">
+  <h1>Editing Project</h1>
 
-<h1>Editing Project</h1>
+  <%= render 'form' %>
 
-<%= render 'form' %>
-
-<%= link_to 'Show', @project %> |
-<%= link_to 'Back', projects_path %>
+  <%= link_to 'Show', @project %> |
+  <%= link_to 'Back', projects_path %>
+</main>

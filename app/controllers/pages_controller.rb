@@ -17,6 +17,7 @@ class PagesController < ApplicationController
   end
 
   def admin
+    @user = current_user
   end
 
   def log_in
