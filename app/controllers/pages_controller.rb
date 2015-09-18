@@ -1,7 +1,6 @@
 class PagesController < ApplicationController
   def home
     @home = true
-    @pro = false
     @project = Project.find(1)
   end
 

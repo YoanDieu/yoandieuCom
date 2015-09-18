@@ -81,18 +81,35 @@ header {
         box-sizing: border-box;
         text-align: center;
         box-sizing: border-box;
-        background-color: white;
         color: #06aae7;
         padding-right: 30%;
         padding-top: 17%;
         box-sizing: border-box;
-        transition: all ease 0.30s;
+
+
+        i {
+          position: relative;
+          width: 100%;
+          vertical-align: middle;
+          height: 100%;
+          transition: all ease 0.3s;
+          background-color: none;
+
+          &:hover{
+            cursor: pointer;
+            background-color: none;
+          }
+        }
 
         &:hover{
           cursor: pointer;
+          background-color: #06aae7;
+          color: white;
         }
-
       }
+
+
+
 
       a{
         position: relative;
@@ -100,7 +117,6 @@ header {
         width: 10%;
         vertical-align: middle;
         height: 100%;
-        padding: 1%;
         box-sizing: border-box;
         background-color: #333332;
         margin: 0px;
@@ -111,12 +127,17 @@ header {
         &:hover{
           background-color: white;
           color: #06aae7;
+          li {
+          transition: none;
+          background-color: none;
+          }
         }
 
         li {
           display: block;
           position: relative;
           width: 100%;
+          height: 100%;
           color: white;
           font-weight: bold;
           font-size: 20px;
@@ -125,7 +146,8 @@ header {
           padding-right: 0;
           padding-top: 2%;
           padding-left: 0;
-          transition: none;
+          background-color: none;
+
         }
 
 
@@ -258,12 +280,20 @@ nav.rightMenu {
           width: 15%;
           vertical-align: middle;
           height: 100%;
-          padding: 1%;
+          padding: 0%;
           box-sizing: border-box;
           background-color: #333332;
           margin: 0px;
           margin-right: -5px;
           text-decoration: none;
+
+          li {
+            background-color: none;
+            transition: none;
+            padding: 7.5%;
+            padding-left: 0%;
+            vertical-align: middle;
+          }
 
           &.active {
             background-color: white;
