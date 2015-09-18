@@ -11,7 +11,9 @@
   <li>
     <article>
       <h1> <%= project.title %> </h1>
-      <img src="assets/<%=project.thumb%>">
+      <div class="thumb">
+        <img src="assets/<%=project.thumb%>">
+      </div>
       <p> <%= project.description %> </p>
       <div class="social">
         <a href="<%= project.github %>"><i class="fa fa-github"></i></a>
