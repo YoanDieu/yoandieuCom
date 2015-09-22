@@ -79,6 +79,16 @@
           min-height: 150px;
         }
 
+        div.technos{
+          display: block;
+          text-align: center;
+
+          img {
+            display: inline-block;
+            height: 25px;
+          }
+        }
+
         div.intel {
           background-color: #06aae7;
           padding: 10px;
