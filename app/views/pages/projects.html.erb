@@ -11,15 +11,16 @@
   <li>
     <article>
       <h1> <%= project.title %> </h1>
+
+      <div class="thumb">
+        <img src="assets/<%=project.thumb%>">
+      </div>
       <div class="technos">
         <% project.technologies.each do |tech|%>
         <img src="assets/<%= tech.logo %>">
         <% end %>
       </div>
-      <div class="thumb">
-        <img src="assets/<%=project.thumb%>">
-      </div>
-      <p> <%= project.description %> </p>
+      <p>Description: <%= project.description %> </p>
 
       <div class="intel">
         <div class="social">
