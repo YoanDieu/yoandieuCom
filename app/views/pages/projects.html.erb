@@ -15,13 +15,21 @@
         <img src="assets/<%=project.thumb%>">
       </div>
       <p> <%= project.description %> </p>
-      <div class="social">
-        <a href="<%= project.github %>"><i class="fa fa-github"></i></a>
-        <a href="<%= project.twitter %>"><i class="fa fa-twitter"></i></a>
-        <a href="<%= project.url %>"><i class="fa fa-link"></i></a>
-      </div>
-      <div class="label">
-        <p> <%= project.created_at.strftime("%d %b, %Y") %> By Yoan </p>
+      <div class="intel">
+        <div class="social">
+          <div class="iconContainer">
+            <a href="<%= project.github %>"><i class="fa fa-github"></i></a>
+          </div>
+          <div class="iconContainer">
+            <a href="<%= project.twitter %>"><i class="fa fa-twitter"></i></a>
+          </div>
+          <div class="iconContainer">
+            <a href="<%= project.url %>"><i class="fa fa-link"></i></a>
+          </div>
+        </div>
+        <div class="label">
+          <p> <%= project.created_at.strftime("%d %b, %Y") %> By Yoan </p>
+        </div>
       </div>
 
     </article>

@@ -9,9 +9,15 @@
   h1 {
     display: block;
     text-align: center;
-    margin-bottom: 40px;
-    font-size: 24px;
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    font-size: 30px;
     font-weight: bold;
+    text-transform: uppercase;
+    background-color: #06aae7;
+    color: white;
   }
 
   ul {
@@ -34,9 +40,8 @@
       article {
         display: block;
         width: 100%;
-        border-bottom: 1px solid #06aae7;
       //  border-bottom: 1px solid black;
-        padding: 6%;
+        padding: 0;
         box-sizing: border-box;
         padding-top: 40px;
         padding-bottom: 10px;
@@ -49,13 +54,15 @@
             font-weight: bold;
             text-transform: uppercase;
             color: #333332;
+            width: auto;
+            background-color: white;
         }
         div.thumb {
           display: block;
           width: 100%;
-          height: 150px;
+          height: 120px;
           overflow: hidden;
-          z-index: 1;
+          z-index: 2;
           box-shadow: inset 0px 0px 6px 1px rgba(6,170,231,1);
           margin-bottom: 20px;
 
@@ -68,35 +75,51 @@
 
         p {
           text-align: justify;
-          margin-bottom: 10px;
-          min-height: 100px;
+          margin-bottom: 40px;
+          min-height: 150px;
         }
 
-        .social {
-          position: relative;
-          display: inline-block;
-          width: 47%;
+        div.intel {
+          background-color: #06aae7;
+          padding: 10px;
 
-          i{
-            color: #333332;
-            font-size: 22px;
-            margin-left: 10px;
+          div.social {
+            position: relative;
+            display: inline-block;
+            width: 47%;
+            div.iconContainer{
+              display: inline-block;
+              border-radius: 5px;
+              margin-left: 5px;
+              i{
+                color: white;
+                font-size: 22px;
+                padding: 2px;
+              }
 
-            &:hover{
-              color: #06aae7;
+              &:hover{
+                background-color: white;
+                i{
+                  color: #06aae7;
+                }
+              }
             }
           }
-        }
 
-        .label {
-          position: relative;
-          display: inline-block;
-          width: 50%;
-          text-align: right;
-          p {
-          min-height: auto;
-          margin: 0;
-          text-align: right;
+          .label {
+            position: relative;
+            display: inline-block;
+            width: 50%;
+            text-align: right;
+            height: auto;
+            vertical-align: top;
+            p {
+            min-height: 0px;
+            margin: 0;
+            margin-top: 3px;
+            text-align: right;
+            color: white;
+            }
           }
         }
       }
@@ -106,7 +129,7 @@
 
 }
 
-@media all and (min-width: 600px) and (max-width: 1000px){
+@media all and (min-width: 600px) and (max-width: 1170px){
   .projects {
 
     ul{
@@ -134,7 +157,7 @@
   }
 }
 
-@media all and (min-width: 1001px){
+@media all and (min-width: 1171px){
   .projects {
 
     ul{
@@ -150,13 +173,24 @@
 
           .social {
             display: inline-block;
-            width: 45%;
+            width: 43%;
+          }
+
+          p{
+            font-size: 16px;
+            height: 150px;
           }
 
           .label {
             display: inline-block;
-            width: 50%;
+            width: 55%;
             text-align: right;
+
+            p{
+            font-size: 13px;
+            font-weight: bold;
+            height: auto;
+            }
           }
         }
       }
