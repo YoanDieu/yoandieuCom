@@ -20,6 +20,18 @@
     <%= f.text_field :thumb %>
   </div>
   <div class="field">
+    <%= form_for(@project) do |f| %>
+    <select type="select" name="technology_id">
+      <% if @technology %>
+      <% @technology.each do |tech| %>
+      <option value = "<%= tech.id %>"><%= tech.name %> </option>
+      <% end %>
+      <% end %>
+    </select>
+    <% end %>
+  </div>
+
+  <div class="field">
     <%= f.label :description %><br>
     <%= f.text_area :description %>
   </div>

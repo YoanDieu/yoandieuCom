@@ -25,6 +25,8 @@ class ProjectsController < ApplicationController
   # POST /projects.json
   def create
     @project = Project.new(project_params)
+    @technology = Technology.all
+    @projectTechnology = ProjectTechnology.new project_id: params(:project_id), technology_id: params(:technology_id)
 
     respond_to do |format|
       if @project.save
