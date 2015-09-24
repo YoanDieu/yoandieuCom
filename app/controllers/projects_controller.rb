@@ -15,21 +15,23 @@ class ProjectsController < ApplicationController
   # GET /projects/new
   def new
     @project = Project.new
+    @technologies = Technology.all
+    @projectTechnology = ProjectTechnology.new
   end
 
   # GET /projects/1/edit
   def edit
+    @technologies = Technology.all
   end
 
   # POST /projects
   # POST /projects.json
   def create
     @project = Project.new(project_params)
-    @technology = Technology.all
-    @projectTechnology = ProjectTechnology.new project_id: params(:project_id), technology_id: params(:technology_id)
 
     respond_to do |format|
       if @project.save
+        @projectTechnology = ProjectTechnology.create project_id: @project.id, technology_id: params[:technology_id]
         format.html { redirect_to @project, notice: 'Project was successfully created.' }
         format.json { render :show, status: :created, location: @project }
       else
@@ -37,6 +39,8 @@ class ProjectsController < ApplicationController
         format.json { render json: @project.errors, status: :unprocessable_entity }
       end
     end
+
+
   end
 
   # PATCH/PUT /projects/1
@@ -44,6 +48,7 @@ class ProjectsController < ApplicationController
   def update
     respond_to do |format|
       if @project.update(project_params)
+        @projectTechnology = ProjectTechnology.create project_id: @project.id, technology_id: params[:technology_id]
         format.html { redirect_to @project, notice: 'Project was successfully updated.' }
         format.json { render :show, status: :ok, location: @project }
       else
@@ -71,6 +76,6 @@ class ProjectsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_params
-      params.require(:project).permit(:title, :thumb, :description, :github, :twitter, :url)
+      params.require(:project).permit(:title, :thumb, :description, :github, :twitter, :url, :technology_id)
     end
 end

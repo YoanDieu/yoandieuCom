@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :experiences, path:"/admin/experiences"
   resources :projects, path:"/admin/projects" do
     resources :technologies
+    resources :project_technology
   end
   resources :users, path:"/admin/users"
 
