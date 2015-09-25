@@ -113,10 +113,13 @@
               display: inline-block;
               border-radius: 5px;
               margin-left: 5px;
+              transition: all ease 0.8s;
+
               i{
                 color: white;
                 font-size: 22px;
                 padding: 2px;
+                transition: all ease 0.8s;
               }
 
               &:hover{
