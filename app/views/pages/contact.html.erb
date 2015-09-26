@@ -2,6 +2,25 @@
 
 <%= render 'jumbotron', pagetitle: "Contact" %>
 
-<main id="main">
+<main id="main" class="contact">
 <h1> Contact </h1>
+
+<form>
+  <p> Prénom: </p>
+  <input name="contact[:prenom]" type="text">
+
+  <p> Nom: </p>
+  <input name="contact[:nom]" type="text">
+
+  <p> Email: </p>
+  <input name="contact[:email]" type="text">
+
+  <p> Sujet: </p>
+  <input name="contact[:sujet]" type="text">
+
+  <p> Message: </p>
+  <textarea name="contact[:message]"></textarea>
+
+  <input type="submit" value="Envoyer !">
+</form>
 </main>
