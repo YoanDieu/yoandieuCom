@@ -27,6 +27,7 @@ footer {
 
         a{
           color: #333332;
+          transition: all ease 0.5s;
 
           &:hover {
             color: #06aae7;
@@ -64,6 +65,8 @@ footer {
         padding-right: 5px;
         vertical-align: middle;
         padding-bottom: 7px;
+        transition: all ease 0.3s;
+
         li {
 
           padding: 5px;
