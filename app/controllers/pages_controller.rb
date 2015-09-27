@@ -18,6 +18,9 @@ class PagesController < ApplicationController
 
   def contact
     @cont = true
+    @user = User.where(role: "Admin")
+    contact = params[:contact]
+    ContactMailer.contact_email(contact).deliver_now
   end
 
   def admin
