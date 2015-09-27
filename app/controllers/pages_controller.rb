@@ -18,8 +18,13 @@ class PagesController < ApplicationController
 
   def contact
     @cont = true
+  end
+
+  def contact_send
     @contact = params[:contact]
     ContactMailer.contact_email(@contact).deliver_now
+
+    redirect_to '/contact'
   end
 
   def admin

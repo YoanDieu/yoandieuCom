@@ -28,7 +28,7 @@ Rails.application.routes.draw do
   get '/projects' => "pages#projects"
   get '/curiculum' => "pages#curiculum"
   get '/contact' => "pages#contact"
-  post '/contact' => "pages#contact"
+  post '/contact_send' => "pages#contact_send"
 
 
   # The priority is based upon order of creation: first created -> highest priority.
