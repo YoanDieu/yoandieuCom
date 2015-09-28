@@ -21,8 +21,11 @@ class PagesController < ApplicationController
   end
 
   def contact_send
-    @contact = params[:contact]
-    ContactMailer.contact_email(@contact).deliver_now
+    @contact = Contact.new(contact_params)
+
+    if @contact.save
+     ContactMailer.contact_email(@contact).deliver
+    end
 
     redirect_to '/contact'
   end
@@ -40,5 +43,9 @@ class PagesController < ApplicationController
     else
       render 'admin'
     end
+  end
+
+  def contact_params
+    params.require(:contact).permit(:firstname, :lastname, :email, :subject, :message)
   end
 end

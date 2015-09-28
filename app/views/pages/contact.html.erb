@@ -5,21 +5,21 @@
 <main id="main" class="contact">
 <h1> Contact </h1>
 
-<%= form_tag action: "contact_send", method: "post" do %>
+<%= form_tag contact_send_path, method: "post" do %>
   <p> Prénom: </p>
-  <input name="contact[:prenom]" type="text">
+  <input name="contact[firstname]" type="text">
 
   <p> Nom: </p>
-  <input name="contact[:nom]" type="text">
+  <input name="contact[lastname]" type="text">
 
   <p> Email: </p>
-  <input name="contact[:email]" type="text">
+  <input name="contact[email]" type="text">
 
   <p> Sujet: </p>
-  <input name="contact[:sujet]" type="text">
+  <input name="contact[subject]" type="text">
 
   <p> Message: </p>
-  <textarea name="contact[:message]"></textarea>
+  <textarea name="contact[message]"></textarea>
 
   <input type="submit" value="Envoyer !">
 <% end %>

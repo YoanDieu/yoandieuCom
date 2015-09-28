@@ -22,5 +22,19 @@ module Yoandieu
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+
   end
 end
+
+ActionMailer::Base.smtp_settings = {
+  address: "smtp.mandrillapp.com",
+  port: 587,
+  enable_starttls_auto: true,
+  user_name: "yoan.dieu@gmail.com",
+  password: "tfkkMyBFRD5aT6E_S4vOZA",
+  authentication: "login"
+}
+
+ActionMailer::Base.delivery_method = :smtp
+ActionMailer::Base.default charset: "utf-8"
