@@ -1,0 +1,76 @@
+main.curriculum{
+  h1 {
+    display: block;
+    text-align: center;
+    width: 220px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #06aae7;
+    color: white;
+  }
+
+nav#cv {
+  ul {
+    display: block;
+    width: 30%;
+    margin: 20px auto;
+    li{
+      display: inline-block;
+      position: relative;
+      width: 30%;
+      height: 50px;
+      margin: 0px 1.2%;
+      background-color: #06aae7;
+      border: 2px solid  #06aae7;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      box-sizing: border-box;
+      padding: 10px;
+      text-align: center;
+      transition: all ease 0.5s;
+
+      &:hover {
+        background-color: white;
+          color: #06aae7;
+        border: 2px solid  #06aae7;
+
+      }
+    }
+  }
+}
+  div.cvWarper{
+    overflow: hidden;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+
+    div.cvFormations {
+      display: inline-block;
+      position: relative;
+      width: 100%;
+      background-color: #06aae7;
+      margin-left: -100%;
+    }
+
+    div.cvExperiences {
+      display: inline-block;
+      position: relative;
+      width: 100%;
+      background-color: #06aae7;
+    }
+
+    div.cvActivites {
+      display: inline-block;
+      position: relative;
+      width: 100%;
+      background-color: #06aae7;
+      margin-left: 100%;
+    }
+  }
+
+}
