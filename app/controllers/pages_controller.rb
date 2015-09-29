@@ -14,6 +14,7 @@ class PagesController < ApplicationController
     @formations = Formation.all
     @experiences = Experience.all
     @activities = Activity.all
+
   end
 
   def contact

@@ -8,15 +8,15 @@
 
   <nav id="cv">
     <ul>
-      <li> Formations </li>
-      <li> Expériences </li>
-      <li> Activités </li>
+      <li id="formationsBtn"> Formations </li>
+      <li id="experiencesBtn"> Expériences </li>
+      <li id="activitesBtn"> Activités </li>
     </ul>
   </nav>
 
 
-  <div class="cvWarper">
-    <div class="cvFormations"
+  <div class="cvWarper" >
+    <div class="cvFormations" id="formations">
       <h2> Formations : </h2>
       <ul>
         <% @formations.each do |formation| %>
@@ -34,8 +34,8 @@
       </ul>
     </div>
 
-    <div class="cvExperiences">
-      <h2> Expériences : </h2>
+    <div class="cvExperiences" id="experiences">
+      <h2> Expériences :</h2>
       <ul>
         <% @experiences.each do |experience| %>
           <li>
@@ -52,7 +52,7 @@
       </ul>
     </div>
 
-    <div class="cvActivites">
+    <div class="cvActivites" id="activites">
       <h2> Activités : </h2>
       <ul>
         <% @activities.each do |activity| %>
@@ -69,5 +69,5 @@
     </ul>
     </div>
   </div>
-
+  <script type="text/javascript" src="cv.js"></script>
 </main>
