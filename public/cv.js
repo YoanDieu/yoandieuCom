@@ -17,11 +17,11 @@ function formationClick(){
 function experiencesClick(){
   $experiences.style.marginLeft = "0%";
   $formations.style.marginLeft = "-101%";
-  $activites.style.marginLeft = "101%";
+  $activites.style.marginLeft = "1%";
 }
 
 function activitesClick(){
-  $activites.style.marginLeft = "0%";
+  $activites.style.marginLeft = "1%";
   $experiences.style.marginLeft = "-101%";
   $fromations.style.marginLeft = "-201%";
 }
