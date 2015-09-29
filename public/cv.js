@@ -7,6 +7,10 @@ $experiences = document.getElementById("experiences");
 $activites = document.getElementById("activites");
 $cvWarper = document.getElementById('cvWarper');
 
+var formationsActive = false;
+var experiencesActive = false;
+var activitesActives = false;
+
 if (getComputedStyle($formations).height > getComputedStyle($experiences).height || getComputedStyle($formations).height > getComputedStyle($activites).height) {
   $cvWarper.style.minHeight = getComputedStyle($formations).height;
 } else if (getComputedStyle($experiences).height > getComputedStyle($formations).height ||getComputedStyle($experiences).height > getComputedStyle($activites).height) {
@@ -16,6 +20,10 @@ if (getComputedStyle($formations).height > getComputedStyle($experiences).height
 }
 
 function formationClick(){
+  formationsActive = true;
+  experiencesActive = false;
+  activitesActives = false;
+
   $formations.style.marginLeft = "0%";
   $formations.style.opacity = "1";
   $experiences.style.marginLeft = "105%";
@@ -34,6 +42,10 @@ function formationClick(){
 }
 
 function experiencesClick(){
+  formationsActive = false;
+  experiencesActive = true;
+  activitesActives = false;
+
   $experiences.style.marginLeft = "0%";
   $experiences.style.opacity = "1";
   $formations.style.marginLeft = "-105%";
@@ -52,6 +64,10 @@ function experiencesClick(){
 }
 
 function activitesClick(){
+  formationsActive = false;
+  experiencesActive = false;
+  activitesActives = true;
+
   $activites.style.marginLeft = "0%";
   $activites.style.opacity = "1";
   $formations.style.marginLeft = "-205%";
@@ -86,19 +102,32 @@ function activitesHover(){
 }
 
 function formationOut(){
-  $formationsBtn.style.backgroundColor = "#06aae7";
-  $formationsBtn.style.color = "white";
+  if (formationsActive = true){
+    $formationsBtn.style.backgroundColor = "#06aae7";
+    $formationsBtn.style.color = "white";
+  }
 }
 
 function experiencesOut(){
-  $experiencesBtn.style.backgroundColor = "#06aae7";
-  $experiencesBtn.style.color = "white";
+  if (experiencesActive = true){
+    $experiencesBtn.style.backgroundColor = "#06aae7";
+    $experiencesBtn.style.color = "white";
+  }
 }
 
 function activitesOut(){
-  $activitesBtn.style.backgroundColor = "#06aae7";
-  $activitesBtn.style.color = "white";
+  if (activitesActive = true){
+    $activitesBtn.style.backgroundColor = "#06aae7";
+    $activitesBtn.style.color = "white";
+  } else {
+    $activitesBtn.style.backgroundColor = "white";
+    $activitesBtn.style.color = "#06aae7";
+  }
 }
+
+$formationsBtn.addEventListener('mouseout', formationOut, false);
+$experiencesBtn.addEventListener('mouseout', experiencesOut, false);
+$activitesBtn.addEventListener('mouseout', activitesOut, false);
 
 $formationsBtn.addEventListener('click', formationClick, false);
 $experiencesBtn.addEventListener('click', experiencesClick, false);
@@ -107,7 +136,3 @@ $activitesBtn.addEventListener('click', activitesClick, false);
 $formationsBtn.addEventListener('mouseover', formationHover, false);
 $experiencesBtn.addEventListener('mouseover', experiencesHover, false);
 $activitesBtn.addEventListener('mouseover', activitesHover, false);
-
-$formationsBtn.addEventListener('mouseout', formationOut, false);
-$experiencesBtn.addEventListener('mouseout', experiencesOut, false);
-$activitesBtn.addEventListener('mouseout', activitesOut, false);
