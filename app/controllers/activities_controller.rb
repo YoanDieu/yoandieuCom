@@ -1,6 +1,6 @@
 class ActivitiesController < ApplicationController
   before_action :set_activity, only: [:show, :edit, :update, :destroy]
-  before_filter :authorize 
+  before_filter :authorize
   # GET /activities
   # GET /activities.json
   def index
@@ -69,6 +69,6 @@ class ActivitiesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def activity_params
-      params.require(:activity).permit(:title, :type, :institution, :description, :github, :twitter, :url)
+      params.require(:activity).permit(:title, :kind, :institution, :description, :github, :twitter, :url)
     end
 end

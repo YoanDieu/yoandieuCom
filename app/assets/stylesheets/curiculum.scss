@@ -44,32 +44,42 @@ nav#cv {
   }
 }
   div.cvWarper{
-    overflow: hidden;
+    display: block;
+    position: relative;
+    overflow: visible;
     width: 50%;
     margin-left: auto;
     margin-right: auto;
 
     div.cvFormations {
       display: inline-block;
-      position: relative;
+      position: absolute;
       width: 100%;
       background-color: #06aae7;
-      margin-left: -100%;
+      margin-left: -101%;
+      vertical-align: top;
+      margin-top: 0;
+
+
     }
 
     div.cvExperiences {
       display: inline-block;
-      position: relative;
+      position: absolute;
       width: 100%;
       background-color: #06aae7;
+      vertical-align: top;
+      margin-top: 0;
     }
 
     div.cvActivites {
       display: inline-block;
-      position: relative;
+      position: absolute;
       width: 100%;
       background-color: #06aae7;
-      margin-left: 100%;
+      margin-left: 101%;
+      vertical-align: top;
+      margin-top: 0;
     }
   }
 
