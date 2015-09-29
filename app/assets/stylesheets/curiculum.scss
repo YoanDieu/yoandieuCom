@@ -65,19 +65,20 @@ nav#cv {
       margin-right: 1%;
       vertical-align: top;
       margin-top: 0;
-      transition: all ease 1s;
-
+      opacity: 0;
+      transition: all ease-in-out 1.2s;
 
     }
 
     div.cvExperiences {
       display: inline-block;
-      position: relative;
+      position: absolute;
       width: 100%;
       background-color: #06aae7;
       vertical-align: top;
       margin-top: 0;
-      transition: all ease 1s;
+      opacity: 1;
+      transition: all ease-in-out 1.2s;
     }
 
     div.cvActivites {
@@ -87,8 +88,9 @@ nav#cv {
       background-color: #06aae7;
       vertical-align: top;
       margin-top: 0;
-      margin-left: 1%;
-      transition: all ease 1s;
+      margin-left: 101%;
+      opacity: 0;
+      transition: all ease-in-out 1.2s;
     }
   }
 
