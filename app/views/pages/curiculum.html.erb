@@ -22,7 +22,12 @@
         <% @formations.each do |formation| %>
         <li>
           <article>
-          <h1> <%= formation.name %> </h1>
+          <h3> <%= formation.name %> </h3>
+          <h4> <%= formation.institution %> </h4>
+          <p> <%= formation.startdate %> / <%= formation.enddate %> </p>
+          <p> <%= formation.skills %> </p>
+          <p> <%= formation.certificate %> </p>
+          <a href="<%= formation.url %>"> Site </a>
           </article>
         </li>
         <% end %>
@@ -35,7 +40,12 @@
         <% @experiences.each do |experience| %>
           <li>
             <article>
-          <h1> <%= experience.position %> </h1>
+              <h3> <%= experience.position %> </h3>
+              <h4> <%= experience.company %> </h4>
+              <p> <%= experience.startdate %> / <%= experience.enddate %> </p>
+              <p> <%= experience.location %> </p>
+              <p> <%= experience.duties %> </p>
+              <a href="<%= experience.url %>"> Site </a>
             </article>
           </li>
         <% end %>
@@ -48,7 +58,11 @@
         <% @activities.each do |activity| %>
         <li>
           <article>
-          <h1> <%= activity.title %> </h1>
+            <h3> <%= activity.title %> </h3>
+            <h4> <%= activity.kind %> </h4>
+            <p> <%= activity.institution %> </p>
+            <p> <%= activity.description %> </p>
+            <a href="<%= activity.url %>"> Site </a>
           </article>
         </li>
         <% end %>
