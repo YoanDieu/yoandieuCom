@@ -18,9 +18,9 @@ if (getComputedStyle($formations).height > getComputedStyle($experiences).height
 function formationClick(){
   $formations.style.marginLeft = "0%";
   $formations.style.opacity = "1";
-  $experiences.style.marginLeft = "101%";
+  $experiences.style.marginLeft = "105%";
   $experiences.style.opacity = "0";
-  $activites.style.marginLeft = "201%";
+  $activites.style.marginLeft = "205%";
   $activites.style.opacity = "0";
 
   $formationsBtn.style.backgroundColor = "white";
@@ -36,9 +36,9 @@ function formationClick(){
 function experiencesClick(){
   $experiences.style.marginLeft = "0%";
   $experiences.style.opacity = "1";
-  $formations.style.marginLeft = "-101%";
+  $formations.style.marginLeft = "-105%";
   $formations.style.opacity = "0";
-  $activites.style.marginLeft = "101%";
+  $activites.style.marginLeft = "105%";
   $activites.style.opacity = "0";
 
   $experiencesBtn.style.backgroundColor = "white";
@@ -54,9 +54,9 @@ function experiencesClick(){
 function activitesClick(){
   $activites.style.marginLeft = "0%";
   $activites.style.opacity = "1";
-  $formations.style.marginLeft = "-201%";
+  $formations.style.marginLeft = "-205%";
   $formations.style.opacity = "0";
-  $experiences.style.marginLeft = "-101%";
+  $experiences.style.marginLeft = "-105%";
   $experiences.style.opacity = "0";
 
   $activitesBtn.style.backgroundColor = "white";

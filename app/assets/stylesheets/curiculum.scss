@@ -17,21 +17,22 @@ main.curriculum{
 nav#cv {
   ul {
     display: block;
-    width: 30%;
+    width: 100%;
     margin: 20px auto;
     li{
       display: inline-block;
       position: relative;
       width: 30%;
       height: 50px;
-      margin: 0px 1.2%;
+      margin: 0px 1%;
       background-color: #06aae7;
       border: 2px solid  #06aae7;
       color: white;
       font-weight: bold;
-      font-size: 18px;
+      font-size: 14px;
       box-sizing: border-box;
-      padding: 10px;
+      padding: 5px;
+      padding-top: 10px;
       text-align: center;
       transition: all ease 0.5s;
 
@@ -48,12 +49,12 @@ nav#cv {
     display: block;
     position: relative;
     overflow: hidden;
-    width: 50%;
+    width: 95%;
     height: auto;
     box-sizing: content-box;
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 100px;
+    margin-left: 1.5%;
+    margin-right: 0;
+    padding-bottom: 50px;
     display: block;
 
     div.cvFormations {
@@ -61,7 +62,7 @@ nav#cv {
       position: absolute;
       width: 100%;
       background-color: #06aae7;
-      margin-left: -101%;
+      margin-left: -105%;
       margin-right: 1%;
       vertical-align: top;
       margin-top: 0;
@@ -88,9 +89,54 @@ nav#cv {
       background-color: #06aae7;
       vertical-align: top;
       margin-top: 0;
-      margin-left: 101%;
+      margin-left: 105%;
       opacity: 0;
       transition: all ease-in-out 1.2s;
+    }
+  }
+
+}
+
+@media all and (min-width: 600px) and (max-width: 1000px){
+
+  main.curriculum{
+    nav#cv {
+      ul {
+        width: 60%;
+
+        li {
+          font-size: 16px;
+          margin: 0px 1.2%;
+        }
+      }
+    }
+
+    div.cvWarper{
+      width: 70%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+}
+
+@media all and (min-width: 1001px) {
+  main.curriculum{
+    nav#cv {
+      ul {
+        width: 40%;
+
+        li {
+          font-size: 18px;
+          margin: 0px 1.2%;
+        }
+      }
+    }
+
+    div.cvWarper{
+      width: 50%;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 
