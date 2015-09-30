@@ -30,9 +30,9 @@ end
 ActionMailer::Base.smtp_settings = {
   address: "smtp.mandrillapp.com",
   port: 587,
+  :user_name =>ENV["user_name"],
+  :password => ENV["password"],
   enable_starttls_auto: true,
-  user_name: "yoan.dieu@gmail.com",
-  password: "tfkkMyBFRD5aT6E_S4vOZA",
   authentication: "login"
 }
 
