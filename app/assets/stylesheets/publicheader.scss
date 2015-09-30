@@ -23,11 +23,11 @@ header {
     color: black;
     z-index: 101;
     vertical-align: middle;
-    transition: all ease 0.3s;
+    transition: all ease 0.5s;
 
     h1 {
       span.cyan {
-        transition: color ease 0.3s;
+        transition: color ease 0.5s;
       }
     }
 
@@ -85,6 +85,7 @@ header {
         padding-right: 30%;
         padding-top: 17%;
         box-sizing: border-box;
+        transition: all ease 0.5s;
 
 
         i {
@@ -108,9 +109,6 @@ header {
         }
       }
 
-
-
-
       a{
         position: relative;
         display: none;
@@ -122,16 +120,7 @@ header {
         margin: 0px;
         margin-right: -5px;
         text-decoration: none;
-        transition: all ease 0.30s;
-
-        &:hover{
-          background-color: white;
-          color: #06aae7;
-          li {
-          transition: none;
-          background-color: none;
-          }
-        }
+        transition: all ease 0.5s;
 
         li {
           display: block;
@@ -147,10 +136,17 @@ header {
           padding-top: 2%;
           padding-left: 0;
           background-color: none;
+          transition: all ease 0.5s;
 
         }
 
-
+        &:hover{
+          background-color: white;
+          color: #06aae7;
+          li {
+          background-color: none;
+          }
+        }
       }
 
     }

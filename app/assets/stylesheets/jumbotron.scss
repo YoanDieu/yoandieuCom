@@ -70,6 +70,7 @@ div.jumbotron{
       a{
         color: white;
         cursor: pointer;
+        transition: all ease 0.5s;
 
         &:hover{
           color: #06aae7;

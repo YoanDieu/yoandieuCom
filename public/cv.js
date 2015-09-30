@@ -12,11 +12,11 @@ var experiencesActive = false;
 var activitesActives = false;
 
 if (getComputedStyle($formations).height > getComputedStyle($experiences).height || getComputedStyle($formations).height > getComputedStyle($activites).height) {
-  $cvWarper.style.minHeight = getComputedStyle($formations).height;
+  $cvWarper.style.height = getComputedStyle($formations).height;
 } else if (getComputedStyle($experiences).height > getComputedStyle($formations).height ||getComputedStyle($experiences).height > getComputedStyle($activites).height) {
-  $cvWarper.style.minHeight = getComputedStyle($experiences).height;
+  $cvWarper.style.height = getComputedStyle($experiences).height;
 } else if (getComputedStyle($activites).height > getComputedStyle($formations).height || getComputedStyle($activites).height > getComputedStyle($experiences).height) {
-  $cvWarper.style.minHeight = getComputedStyle($activites).height;
+  $cvWarper.style.height = getComputedStyle($activites).height;
 }
 
 function formationClick(){

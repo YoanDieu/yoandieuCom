@@ -22,12 +22,12 @@
         <% @formations.each do |formation| %>
         <li>
           <article>
+          <h4> <%= formation.startdate %> / <%= formation.enddate %> </h4>
           <h3> <%= formation.name %> </h3>
           <h4> <%= formation.institution %> </h4>
-          <p> <%= formation.startdate %> / <%= formation.enddate %> </p>
           <p> <%= formation.skills %> </p>
           <p> <%= formation.certificate %> </p>
-          <a href="<%= formation.url %>"> Site </a>
+          <a href="<%= formation.url %>"> <i class="fa fa-link"></i> </a>
           </article>
         </li>
         <% end %>
@@ -40,12 +40,11 @@
         <% @experiences.each do |experience| %>
           <li>
             <article>
+              <h4> <%= experience.startdate %> / <%= experience.enddate %> </h4>
               <h3> <%= experience.position %> </h3>
-              <h4> <%= experience.company %> </h4>
-              <p> <%= experience.startdate %> / <%= experience.enddate %> </p>
-              <p> <%= experience.location %> </p>
+              <h4> <%= experience.company %> (<%= experience.location %>)</h4>
               <p> <%= experience.duties %> </p>
-              <a href="<%= experience.url %>"> Site </a>
+              <a href="<%= experience.url %>"> <i class="fa fa-link"></i> </a>
             </article>
           </li>
         <% end %>
@@ -62,7 +61,7 @@
             <h4> <%= activity.kind %> </h4>
             <p> <%= activity.institution %> </p>
             <p> <%= activity.description %> </p>
-            <a href="<%= activity.url %>"> Site </a>
+            <a href="<%= activity.url %>"> <i class="fa fa-link"></i> </a>
           </article>
         </li>
         <% end %>

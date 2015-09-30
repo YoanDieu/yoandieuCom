@@ -48,7 +48,7 @@ nav#cv {
   div.cvWarper{
     display: block;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     width: 95%;
     height: auto;
     box-sizing: content-box;
@@ -61,7 +61,7 @@ nav#cv {
       display: inline-block;
       position: absolute;
       width: 100%;
-      background-color: #06aae7;
+      background-color:white;
       margin-left: -105%;
       margin-right: 1%;
       vertical-align: top;
@@ -69,29 +69,189 @@ nav#cv {
       opacity: 0;
       transition: all ease-in-out 1.2s;
 
+      h2 {
+        display: block;
+        text-align: center;
+        font-weight: bold;
+        font-size: 20px;
+        color: #333332;
+        margin-bottom: 20px;
+      }
+
+      ul {
+        li {
+
+          border-bottom: 1px solid #d3d3d3;
+          border-top: none;
+          padding-top: 20px;
+          padding-bottom: 20px;
+
+          article {
+            padding: 2%;
+
+            h3{
+              text-align: center;
+              font-size: 20px;
+              color: #06aae7;
+              font-weight: bold;
+              text-transform: uppercase;
+            }
+            h4{
+              text-align: center;
+                font-size: 16px;
+                font-weight: bold;
+                color: #868686;
+                margin-bottom: 30px;
+
+                &:first-child {
+                  margin-bottom: 0;
+                }
+            }
+            p{
+              text-align: justify;
+
+            }
+            a{
+              display: block;
+              text-align: right;
+            }
+          }
+
+          &:first-child {
+            border-top: 1px solid #d3d3d3;
+          }
+        }
+      }
+
     }
 
     div.cvExperiences {
       display: inline-block;
       position: absolute;
       width: 100%;
-      background-color: #06aae7;
+      background-color: white;
       vertical-align: top;
       margin-top: 0;
       opacity: 1;
       transition: all ease-in-out 1.2s;
+
+      h2 {
+        display: block;
+        text-align: center;
+        font-weight: bold;
+        font-size: 20px;
+        color: #333332;
+        margin-bottom: 20px;
+      }
+
+      ul {
+        li {
+
+          border-bottom: 1px solid #d3d3d3;
+          border-top: none;
+          padding-top: 20px;
+          padding-bottom: 20px;
+
+          article {
+            padding: 2%;
+
+            h3{
+              text-align: center;
+              font-size: 20px;
+              color: #06aae7;
+              font-weight: bold;
+              text-transform: uppercase;
+            }
+            h4{
+              text-align: center;
+                font-size: 16px;
+                font-weight: bold;
+                color: #868686;
+                margin-bottom: 30px;
+
+                &:first-child {
+                  margin-bottom: 0;
+                }
+            }
+            p{
+              text-align: justify;
+            }
+            a{
+              display: block;
+              text-align: right;
+            }
+          }
+
+          &:first-child {
+            border-top: 1px solid #d3d3d3;
+          }
+        }
+      }
     }
 
     div.cvActivites {
       display: inline-block;
       position: absolute;
       width: 100%;
-      background-color: #06aae7;
+      background-color: white;
       vertical-align: top;
       margin-top: 0;
       margin-left: 105%;
       opacity: 0;
       transition: all ease-in-out 1.2s;
+
+      h2 {
+        display: block;
+        text-align: center;
+        font-weight: bold;
+        font-size: 20px;
+        color: #333332;
+        margin-bottom: 20px;
+      }
+
+      ul {
+        li {
+
+          border-bottom: 1px solid #d3d3d3;
+          border-top: none;
+          padding-top: 20px;
+          padding-bottom: 20px;
+
+          article {
+            padding: 2%;
+            
+            h3{
+              text-align: center;
+              font-size: 20px;
+              color: #06aae7;
+              font-weight: bold;
+              text-transform: uppercase;
+            }
+            h4{
+              text-align: center;
+                font-size: 16px;
+                font-weight: bold;
+                color: #868686;
+                margin-bottom: 30px;
+
+                &:first-child {
+                  margin-bottom: 0;
+                }
+            }
+            p{
+              text-align: justify;
+            }
+            a{
+              display: block;
+              text-align: right;
+            }
+          }
+
+          &:first-child {
+            border-top: 1px solid #d3d3d3;
+          }
+        }
+      }
     }
   }
 
