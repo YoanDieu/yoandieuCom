@@ -10,7 +10,7 @@ div.filter {
   box-sizing: border-box;
 }
 
-main {
+main.home {
   display: block;
   padding-top: 20px;
   padding-bottom: 80px;
@@ -40,14 +40,22 @@ main {
         font-weight: bold;
         text-transform: uppercase;
         color: #06aae7;
+      }
 
-
+      h2{
+        font-size: 28px;
+        font-weight: bolder;
+        margin-bottom: 3%;
+        font-weight: bold;
+        text-align: center;
+        text-transform: uppercase;
+        color: #06aae7;
       }
 
       div.thumb {
         display: block;
         width: 100%;
-        height: 150px;
+        height: 280px;
         overflow: hidden;
         z-index: 1;
         transition: all ease 0.5s;
@@ -106,7 +114,7 @@ main {
     }
 
 
-  main {
+  main.home {
 
     div.container {
       width: 80%;
@@ -115,6 +123,10 @@ main {
         margin-left: auto;
         margin-right: auto;
         padding: 6%;
+
+        div.thumb {
+          height: 370px;
+        }
 
 
       }
@@ -125,33 +137,90 @@ main {
 @media all and (min-width: 1001px) and (max-width: 1559px) {
 
 
-  main {
+  main.home {
+    margin-top: 520px;
 
     div.container {
 
-      width: 85%;
+      width: 70%;
 
       article{
 
-
         margin-left: auto;
         margin-right: auto;
-        margin-bottom: 170px;
+        margin-bottom: 20px;
         padding: 2%;
 
         p {
           font-size: 18px;
+          line-height: 2;
         }
+        div {
 
-        div.thumb {
-          height: 350px;
 
-        &:hover{
-          box-shadow: inset 0px 0px 12px 2px rgba(6,170,231,1);
-        }
+          div.thumb {
 
-          img {
-            z-index: -1;
+            display: inline-block;
+            clear: right;
+            width: 25%;
+            height: 220px;
+            vertical-align: top;
+            z-index: 2;
+            margin-left: 80px;
+
+          &:hover{
+            box-shadow: inset 0px 0px 12px 2px rgba(6,170,231,1);
+            border: 1px solid rgba(6,170,231,1);
+            z-index: 1;
+          }
+
+            img {
+              display: block;
+              position: relative;
+              width: 100%;
+              z-index: -1;
+            }
+          }
+          div.quote {
+            position: relative;
+            display: inline-block;
+            clear: left;
+            vertical-align: top;
+            max-width: 50%;
+            margin-left: 4%;
+            background-color: none;
+            padding: 20px;
+            box-sizing: border-box;
+            border: 3px solid rgba(6,170,231,1);
+            border-radius: 15px;
+            border-bottom-left-radius: 0;
+            margin-top: 20px;
+            p {
+              display: inline-block;
+              color: #666664;
+              font-weight: bold;
+              margin-bottom: -10px;
+              line-height: 1.2;
+
+              &:first-child{
+                margin: 0;
+                line-height: 0.5;
+                font-size: 40px;
+              }
+              &:last-child {
+                display: block;
+                text-align: right;
+                font-size: 40px;
+                line-height: 0.5;
+                margin: 0;
+              }
+
+              span.citation {
+                color: rgba(6,170,231,1);
+                font-family: 'Roboto Slab', serif;
+                line-height: 0.5;
+              }
+            }
           }
         }
       }
@@ -162,7 +231,7 @@ main {
 @media all and (min-width: 1560px) {
 
 
-  main {
+  main.home {
 
     div.container {
 
@@ -179,16 +248,35 @@ main {
         p {
           font-size: 18px;
         }
+        div {
+          display: block;
 
-        div.thumb {
-          height: 350px;
+          div.quote {
+            position: relative;
+            display: inline-block;
+            clear: left;
+            vertical-align: top;
+            max-width: 50%;
 
-          &:hover{
-            box-shadow: inset 0px 0px 12px 2px rgba(6,170,231,1);
+            p{
+
+            }
           }
-
-          img {
+          div.thumb {
+            width: 350px;
+            height: 350px;
             z-index: -1;
+
+            &:hover{
+              box-shadow: inset 0px 0px 12px 2px rgba(6,170,231,1);
+              img {
+                z-index: -2;
+              }
+            }
+
+            img {
+              z-index: -2;
+            }
           }
         }
       }

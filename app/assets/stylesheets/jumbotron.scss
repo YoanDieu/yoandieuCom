@@ -27,6 +27,7 @@ div.jumbotron{
     text-align: center;
     text-transform: uppercase;
     line-height: 0.8;
+    transition: all ease 1s;
     span.cyan {
       color: #06aae7;
     }
@@ -83,7 +84,7 @@ div.jumbotron{
 i.fa-chevron-down{
   position: relative;
   display:block;
-  top: 410px;
+  top: 150px;
   width: 100%;
   color : #06aae7;
   font-size: 50px;
@@ -123,6 +124,10 @@ main.noJumbotron {
           font-size: 15px;
         }
       }
+    }
+
+    i.fa-chevron-down{
+      top: 180px;
     }
 
     main{
@@ -175,7 +180,7 @@ main.noJumbotron {
   }
 
   i.fa-chevron-down{
-    top: 460px;
+    top: 220px;
     transition: all ease 0.4s;
   }
 
@@ -208,7 +213,7 @@ main.noJumbotron {
   }
 
   i.fa-chevron-down{
-    top: 585px;
+    top: 270px;
   }
 
 }
@@ -220,7 +225,7 @@ main.noJumbotron {
 
     h1 {
       margin-top: 270px;
-      padding-left: 15%;
+      font-size: 70px;
     }
     div.filter {
       height: 180px;
@@ -239,7 +244,7 @@ main.noJumbotron {
   }
 
   i.fa-chevron-down{
-    padding-left: 10%;
+    top: 390px
   }
 
   main{

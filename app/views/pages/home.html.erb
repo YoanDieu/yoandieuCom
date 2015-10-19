@@ -2,16 +2,21 @@
 
 <%= render 'jumbotron', pagetitle: "Accueil" %>
 
-<main id="main">
+<main id="main" class="home">
   <div class="container">
     <article class="aPropos">
-      <h1> <%= @project.title %> </h1>
-      <div class="thumb">
-      <img src="assets/<%= @project.thumb %>">
+      <h2> Qui suis-je ?</h2>
+      <div>
+        <div class="thumb">
+          <img src="assets/yo.JPG">
+        </div>
+        <div class="quote">
+          <p><span class="citation">"</span></p><p>Je ne retiens jamais les citations, ce qui est un avantage, puisque ça me force à réfléchir. ;)</p><p><span class="citation">"</span> </p>
+        </div>
       </div>
-      <p><%= @project.description %></p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       <div class="source">
-        <p>Yoan, <span> <%= @project.created_at.strftime("%d %b, %Y") %></span></p>
+        <p>Yoan, <span> 19, Oct 2015 </span></p>
       </div>
     </article>
   </div>
