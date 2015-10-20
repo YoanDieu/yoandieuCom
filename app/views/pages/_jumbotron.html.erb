@@ -1,22 +1,25 @@
 <div class="jumbotron" id="jumbotron" style="background:url('/assets/<%= pagejumbo %>'); background-attachment:fixed; background-position:center; background-size:cover;">
 
   <h1><%= pagetitle %></h1>
-
+  <% puts bandtitle %>
   <div class="filter">
     <h2>
       <% if bandtitle %>
-        bandetitle
+        <%= bandtitle %>
       <% else %>
-        En contruction
+        En construction
       <% end %>
      </h2>
     <p>
       <% if bandcontent %>
-        bandecontent
+        <%= bandcontent %>
       <% else %>
-      Bienvenue sur le site de présentation de <strong><bold>Yoan Dieu</bold></strong>, Seigneur du developpement Web/mobile (Junior) ! En formation à <a href="http://www.simplon.co">Simplon.co</a> !
+       Bienvenue sur le site de présentation de <strong><bold>Yoan Dieu</bold></strong>, Seigneur du developpement Web/mobile (Junior) ! En formation à <a href='http://www.simplon.co'>Simplon.co</a> !
       <% end %>
     </p>
+    <% if credits %>
+      <p> <%= credits %> </p>
+    <% end %>
   </div>
 </div>
 

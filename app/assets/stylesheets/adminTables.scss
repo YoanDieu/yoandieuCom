@@ -1,6 +1,7 @@
 main.noJumbotron {
   margin-top: 200px;
 
+
   h1 {
     display: block;
     text-align: center;
@@ -75,4 +76,8 @@ main.noJumbotron {
     }
   }
 
+  a {
+    display: block;
+    margin-bottom: 100px;
+  }
 }

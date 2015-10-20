@@ -37,7 +37,7 @@ div.jumbotron{
     position: absolute;
     width: 100%;
     bottom: 0px;
-    height: 120px;
+    min-height: 150px;
     background-color: rgba(0,0,0, 0.5);
     padding: 15px;
     box-sizing: border-box;
@@ -84,7 +84,7 @@ div.jumbotron{
 i.fa-chevron-down{
   position: relative;
   display:block;
-  top: 150px;
+  top: 50px;
   width: 100%;
   color : #06aae7;
   font-size: 50px;
@@ -198,6 +198,10 @@ main.noJumbotron {
     div.filter {
       height: 120px;
       padding-top: 30px;
+
+      p {
+        font-size: 16px;
+      }
     }
   }
 

@@ -1,6 +1,6 @@
 <%= render 'menu' %>
 
-<%= render 'jumbotron', pagetitle: "projets", pagejumbo: 'mars.jpeg', bandtitle: false, bandcontent: false %>
+<%= render 'jumbotron', pagetitle: "projets", pagejumbo: 'mars.jpeg', bandtitle: "Explorez !", bandcontent: "Ci dessous ce trouve une liste des projets auquels j'ai participé ainsi que leur détail. Cliquez sur l'oeil du projet pour en savoir plus !", credits: false %>
 
 <main class="projects" id="main">
 
@@ -31,10 +31,10 @@
                 <a href="<%= project.twitter %>"><i class="fa fa-twitter"></i></a>
               </div>
               <div class="iconContainer">
-                <a href="<%= project.url %>"><i class="fa fa-link"></i></a>
+                <a href="/project/<%= project.id %>"><i class="fa fa-info-circle"></i></a>
               </div>
-              <div cass="iconContainer">
-                  <a href="/project/<%= project.id %>">Voir en détail </a>
+              <div class="iconContainer">
+                <a href="<%= project.url %>"><i class="fa fa-eye"></i></a>
               </div>
             </div>
             <div class="label">

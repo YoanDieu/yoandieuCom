@@ -75,9 +75,33 @@ main.home {
 
           }
 
+          div.caption {
+            display: block;
+            z-index: 0;
+            height: 200px;
+            width: 100%;
+            background-color: rgba(6,170,231,0.5);
+            margin-top: 0;
+            transition: all ease 1s;
+
+            p{
+              display: block;
+              width: 60%;
+              margin: 0px auto;
+              padding: 15px 0;
+              color: white;
+              text-align: center;
+              line-height: 1.8;
+
+            }
+          }
+
           &:hover{
             box-shadow: inset 0px 0px 6px 1px rgba(6,170,231,1);
             border: 1px solid rgba(6,170,231,1);
+            div.caption {
+                margin-top: -140px;
+            }
           }
         }
 
@@ -177,6 +201,14 @@ main.home {
           height: 320px;
           width: 320px;
           margin: 0 auto;
+
+          div.caption {
+
+          p{
+            padding: 10px;
+            font-size: 16px;
+          }
+          }
         }
 
 
@@ -235,6 +267,14 @@ main.home {
               width: 100%;
               border-radius: 50%;
               z-index: -1;
+            }
+
+            div.caption {
+
+            p{
+              padding: 15px;
+              font-size: 14px;
+            }
             }
           }
           div.quote {
@@ -302,7 +342,7 @@ main.home {
 
         margin-left: auto;
         margin-right: auto;
-        margin-bottom: 170px;
+        margin-bottom: 20px;
         padding: 2%;
 
         p {
@@ -317,12 +357,15 @@ main.home {
             clear: left;
             vertical-align: top;
             max-width: 50%;
+            border-radius: 15px;
+            border-bottom-left-radius: 0;
 
             p{
 
             }
           }
           div.thumb {
+            display: inline-block;
             width: 350px;
             height: 350px;
             z-index: -1;
@@ -332,10 +375,20 @@ main.home {
               img {
                 z-index: -2;
               }
+              div.caption {
+                margin-top: -180px;
+
+              p{
+                padding: 25px;
+                font-size: 18px;
+              }
             }
 
             img {
               z-index: -2;
+            }
+
+
             }
           }
         }
