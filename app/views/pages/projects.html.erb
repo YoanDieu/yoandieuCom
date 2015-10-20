@@ -1,6 +1,6 @@
 <%= render 'menu' %>
 
-<%= render 'jumbotron', pagetitle: "projets" %>
+<%= render 'jumbotron', pagetitle: "projets", pagejumbo: 'tore1.jpg', bandtitle: false, bandcontent: false %>
 
 <main class="projects" id="main">
 
@@ -8,39 +8,41 @@
 
   <ul>
   <% @projects.each do |project| %>
-  <li>
-    <article>
-      <h1> <%= project.title %> </h1>
+      <li>
+        <article>
+          <h1> <%= project.title %> </h1>
 
-      <div class="thumb">
-        <img src="assets/<%=project.thumb%>">
-      </div>
-      <div class="technos">
-        <% project.technologies.each do |tech|%>
-        <img src="assets/<%= tech.logo %>">
-        <% end %>
-      </div>
-      <p>Description: <%= project.description %> </p>
+          <div class="thumb">
+            <img src="assets/<%=project.thumb%>">
+          </div>
+          <div class="technos">
+            <% project.technologies.each do |tech|%>
+            <img src="assets/<%= tech.logo %>">
+            <% end %>
+          </div>
+          <p>Description: <%= project.description[0..140] %>... </p>
 
-      <div class="intel">
-        <div class="social">
-          <div class="iconContainer">
-            <a href="<%= project.github %>"><i class="fa fa-github"></i></a>
+          <div class="intel">
+            <div class="social">
+              <div class="iconContainer">
+                <a href="<%= project.github %>"><i class="fa fa-github"></i></a>
+              </div>
+              <div class="iconContainer">
+                <a href="<%= project.twitter %>"><i class="fa fa-twitter"></i></a>
+              </div>
+              <div class="iconContainer">
+                <a href="<%= project.url %>"><i class="fa fa-link"></i></a>
+              </div>
+              <div cass="iconContainer">
+                  <a href="/project/<%= project.id %>">Voir en détail </a>
+              </div>
+            </div>
+            <div class="label">
+              <p> <%= project.created_at.strftime("%d %b, %Y") %> By Yoan </p>
+            </div>
           </div>
-          <div class="iconContainer">
-            <a href="<%= project.twitter %>"><i class="fa fa-twitter"></i></a>
-          </div>
-          <div class="iconContainer">
-            <a href="<%= project.url %>"><i class="fa fa-link"></i></a>
-          </div>
-        </div>
-        <div class="label">
-          <p> <%= project.created_at.strftime("%d %b, %Y") %> By Yoan </p>
-        </div>
-      </div>
-
-    </article>
-  </li>
+        </article>
+      </li>
   <% end %>
   </ul>
 

@@ -46,6 +46,11 @@ class PagesController < ApplicationController
     end
   end
 
+  def show_project
+    @project = Project.find(params[:id])
+    puts @project.thumb
+  end
+
   def contact_params
     params.require(:contact).permit(:firstname, :lastname, :email, :subject, :message)
   end

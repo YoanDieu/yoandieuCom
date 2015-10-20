@@ -26,6 +26,7 @@ Rails.application.routes.draw do
   root 'pages#home'
 
   get '/projects' => "pages#projects"
+  get '/project/:id' => "pages#show_project"
   get '/curiculum' => "pages#curiculum"
   get '/contact' => "pages#contact"
   post '/contact_send' => "pages#contact_send"

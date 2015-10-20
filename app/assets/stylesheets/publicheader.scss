@@ -178,6 +178,24 @@ nav.rightMenu {
       font-size: 20px;
       font-weight: bold;
 
+      &.active {
+        background-color: white;
+
+        li {
+          color: #06aae7;
+          background-color: white;
+        }
+      }
+
+      &:hover{
+        background-color: #06aae7;
+        &.active {
+          background-color: #06aae7;
+          li {
+            color: white;
+          }
+        }
+      }
 
       li {
         height: 50px;
