@@ -31,7 +31,7 @@ header {
       }
     }
 
-    
+
   }
 
   h1 {
@@ -221,16 +221,6 @@ nav.rightMenu {
 
     a.home {
       color: black;
-
-      &:hover {
-        background-color: #06aae7;
-
-        h1{
-          span.cyan {
-            color:white;
-          }
-        }
-      }
     }
 
     h1 {
