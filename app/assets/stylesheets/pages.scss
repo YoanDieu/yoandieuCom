@@ -157,6 +157,11 @@ main.home {
         text-align: justify;
         margin-bottom: 20px;
         line-height: 2;
+
+        strong {
+          font-weight: bold;
+        }
+
       }
 
       div.source{
@@ -241,6 +246,10 @@ main.home {
         p {
           font-size: 18px;
           line-height: 2;
+
+          &:first-child {
+            margin-top: 30px;
+          }
         }
         div {
           margin-bottom: 40px;
@@ -251,7 +260,7 @@ main.home {
             clear: right;
             width: 270px;
             height: 270px;
-            vertical-align: top;
+            vertical-align: middle;
             z-index: 2;
             margin-left: 20px;
 
@@ -281,7 +290,7 @@ main.home {
             position: relative;
             display: inline-block;
             clear: left;
-            vertical-align: top;
+            vertical-align: middle;
             max-width: 50%;
             margin-left: 4%;
             background-color: none;
@@ -346,16 +355,18 @@ main.home {
         padding: 2%;
 
         p {
+          display: block;
           font-size: 18px;
+
         }
         div {
           display: block;
-
+          margin-bottom: 20px;
           div.quote {
             position: relative;
             display: inline-block;
             clear: left;
-            vertical-align: top;
+            vertical-align: middle;
             max-width: 50%;
             border-radius: 15px;
             border-bottom-left-radius: 0;
@@ -368,6 +379,7 @@ main.home {
             display: inline-block;
             width: 350px;
             height: 350px;
+            vertical-align: middle;
             z-index: -1;
 
             &:hover{

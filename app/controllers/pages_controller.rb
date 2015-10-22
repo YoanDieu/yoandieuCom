@@ -43,7 +43,7 @@ class PagesController < ApplicationController
 
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
-      redirect_to '/admin/users'
+      redirect_to '/admin'
     else
       render 'admin'
     end

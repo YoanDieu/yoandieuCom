@@ -1,9 +1,12 @@
 <%= render 'menu' %>
 
-<%= render 'jumbotron', pagetitle: "projets", pagejumbo: @project.thumb, bandtitle: false, bandcontent: false, credits: false %>
+<%= render 'jumbotron', pagetitle: @project.title, pagejumbo: @project.thumb, bandtitle: false, bandcontent: false, credits: false %>
 
 <main class="projects" id="main">
 
 
-<h1> test </h1>
+
+  <article>
+    <h1><%= @project.title %></h1>
+  </article>
 </main>

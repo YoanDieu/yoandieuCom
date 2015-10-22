@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
-  before_filter :authorize 
+  before_filter :authorize
 
   # GET /users
   # GET /users.json
@@ -25,8 +25,13 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.json
   def create
-    @user = User.new name: params[:user][:name], password: params[:user][:password]
 
+    if User.all.length < 1
+      @user = User.new name: params[:user][:name], password: params[:user][:password]
+    else
+      flash[:error] = "Pour créer un compte, merci de contacter l'administrateur !"
+    end
+    
     respond_to do |format|
       if @user.save
         format.html { redirect_to users_path, notice: 'User was successfully created.' }

@@ -9,9 +9,9 @@ def create
 
   if user && user.authenticate(params[:password])
     session[:user_id] = user.id
-    redirect_to '/admin/users'
-  else
     redirect_to '/admin'
+  else
+    render 'admin'
   end
 end
 

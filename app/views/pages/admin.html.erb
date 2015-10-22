@@ -3,8 +3,12 @@
 <main class="noJumbotron">
 <% if current_user %>
   Signed in as <%= current_user.name %> | <%= link_to "Logout", '/logout' %>
-<% else %>
-  <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
+<% end %>
+
+<% if flash[:success] %>
+  <div class="success"> <%= flash[:success] %> </div>
+<% elsif flash[:error] %>
+  <div class="error"> <%= flash[:error] %> </div>
 <% end %>
 
 <%= form_tag "/admin", method: :post do %>
