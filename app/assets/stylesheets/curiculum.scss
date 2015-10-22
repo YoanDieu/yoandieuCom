@@ -1,5 +1,5 @@
 main.curriculum{
-
+  overflow: hidden;
   h1 {
     display: block;
     text-align: center;
@@ -38,9 +38,8 @@ nav#cv {
 
       &:hover {
         background-color: white;
-          color: #06aae7;
+        color: #06aae7;
         border: 2px solid  #06aae7;
-
       }
     }
   }
@@ -106,15 +105,17 @@ nav#cv {
                 &:first-child {
                   margin-bottom: 0;
                 }
+
+                a{
+                  display: inline-block;
+                  color: #06aae7;
+                }
             }
             p{
               text-align: justify;
 
             }
-            a{
-              display: block;
-              text-align: right;
-            }
+
           }
 
           &:first-child {
@@ -172,13 +173,14 @@ nav#cv {
                 &:first-child {
                   margin-bottom: 0;
                 }
+
+                a{
+                  display: inline-block;
+                  color: #06aae7;
+                }
             }
             p{
               text-align: justify;
-            }
-            a{
-              display: block;
-              text-align: right;
             }
           }
 
@@ -219,7 +221,7 @@ nav#cv {
 
           article {
             padding: 2%;
-            
+
             h3{
               text-align: center;
               font-size: 20px;
@@ -237,13 +239,14 @@ nav#cv {
                 &:first-child {
                   margin-bottom: 0;
                 }
+
+                a{
+                  display: inline-block;
+                  color: #06aae7;
+                }
             }
             p{
               text-align: justify;
-            }
-            a{
-              display: block;
-              text-align: right;
             }
           }
 

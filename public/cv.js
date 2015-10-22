@@ -6,10 +6,16 @@ $formations = document.getElementById("formations");
 $experiences = document.getElementById("experiences");
 $activites = document.getElementById("activites");
 $cvWarper = document.getElementById('cvWarper');
+$cvWarper.style.overflow = "hidden";
+$experiencesBtn.style.border = "none";
+$experiencesBtn.style.borderBottom = "2px solid #06aae7";
+$experiencesBtn.style.color = "#06aae7";
 
 var formationsActive = false;
-var experiencesActive = false;
-var activitesActives = false;
+var experiencesActive = true;
+var activitesActive = false;
+
+$experiencesBtn.style.backgroundColor = "white";
 
 if (getComputedStyle($formations).height > getComputedStyle($experiences).height || getComputedStyle($formations).height > getComputedStyle($activites).height) {
   $cvWarper.style.height = getComputedStyle($formations).height;
@@ -19,10 +25,34 @@ if (getComputedStyle($formations).height > getComputedStyle($experiences).height
   $cvWarper.style.height = getComputedStyle($activites).height;
 }
 
+function setActive() {
+  if (formationsActive != false){
+    $formationsBtn.style.border = "none";
+    $formationsBtn.style.borderBottom = "2px solid #06aae7";
+    $experiencesBtn.style.border = "2px solid #06aae7";
+    $activitesBtn.style.border = "2px solid #06aae7";
+  }else if (experiencesActive != false) {
+    $experiencesBtn.style.border = "none";
+    $experiencesBtn.style.borderBottom = "2px solid #06aae7";
+    $formationsBtn.style.border = "2px solid #06aae7";
+    $activitesBtn.style.border = "2px solid #06aae7";
+  }else if (activitesActive != false){
+    $activitesBtn.style.border = "none";
+    $activitesBtn.style.borderBottom = "2px solid #06aae7";
+    $formationsBtn.style.border = "2px solid #06aae7";
+    $experiencesBtn.style.border = "2px solid #06aae7";
+
+  }
+}
+
 function formationClick(){
   formationsActive = true;
   experiencesActive = false;
-  activitesActives = false;
+  activitesActive = false;
+
+  setActive();
+
+  $cvWarper.style.overflow = "visible";
 
   $formations.style.marginLeft = "0%";
   $formations.style.opacity = "1";
@@ -39,12 +69,18 @@ function formationClick(){
 
   $activitesBtn.style.backgroundColor = "#06aae7";
   $activitesBtn.style.color = "white";
+
+  setTimeout(function(){$cvWarper.style.overflow = "hidden";}, 1000);
 }
 
 function experiencesClick(){
   formationsActive = false;
   experiencesActive = true;
-  activitesActives = false;
+  activitesActive = false;
+
+  setActive();
+
+  $cvWarper.style.overflow = "visible";
 
   $experiences.style.marginLeft = "0%";
   $experiences.style.opacity = "1";
@@ -61,12 +97,18 @@ function experiencesClick(){
 
   $activitesBtn.style.backgroundColor = "#06aae7";
   $activitesBtn.style.color = "white";
+
+  setTimeout(function(){$cvWarper.style.overflow = "hidden";}, 1000);
 }
 
 function activitesClick(){
   formationsActive = false;
   experiencesActive = false;
-  activitesActives = true;
+  activitesActive = true;
+
+  setActive();
+
+  $cvWarper.style.overflow = "visible";
 
   $activites.style.marginLeft = "0%";
   $activites.style.opacity = "1";
@@ -84,45 +126,52 @@ function activitesClick(){
   $experiencesBtn.style.backgroundColor = "#06aae7";
   $experiencesBtn.style.color = "white";
 
+  setTimeout(function(){$cvWarper.style.overflow = "hidden";}, 1000);
 }
 
 function formationHover(){
   $formationsBtn.style.backgroundColor = "white";
   $formationsBtn.style.color = "#06aae7";
+  setActive();
 }
 
 function experiencesHover(){
   $experiencesBtn.style.backgroundColor = "white";
   $experiencesBtn.style.color = "#06aae7";
+  setActive();
 }
 
 function activitesHover(){
   $activitesBtn.style.backgroundColor = "white";
   $activitesBtn.style.color = "#06aae7";
+  setActive();
 }
 
 function formationOut(){
-  if (formationsActive = true){
+  if (formationsActive == false){
     $formationsBtn.style.backgroundColor = "#06aae7";
     $formationsBtn.style.color = "white";
   }
+  setActive();
 }
 
 function experiencesOut(){
-  if (experiencesActive = true){
+  if (experiencesActive == false){
     $experiencesBtn.style.backgroundColor = "#06aae7";
     $experiencesBtn.style.color = "white";
   }
+  setActive();
 }
 
 function activitesOut(){
-  if (activitesActive = true){
+  if (activitesActive == false){
     $activitesBtn.style.backgroundColor = "#06aae7";
     $activitesBtn.style.color = "white";
   } else {
     $activitesBtn.style.backgroundColor = "white";
     $activitesBtn.style.color = "#06aae7";
   }
+  setActive();
 }
 
 $formationsBtn.addEventListener('mouseout', formationOut, false);

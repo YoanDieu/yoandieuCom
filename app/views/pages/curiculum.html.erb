@@ -24,10 +24,9 @@
           <article>
           <h4> <%= formation.startdate %> / <%= formation.enddate %> </h4>
           <h3> <%= formation.name %> </h3>
-          <h4> <%= formation.institution %> </h4>
+          <h4> <%= formation.institution %> <a href="<%= formation.url %>"> <i class="fa fa-eye"></i> </a> </h4>
           <p> <%= formation.skills %> </p>
           <p> <%= formation.certificate %> </p>
-          <a href="<%= formation.url %>"> <i class="fa fa-link"></i> </a>
           </article>
         </li>
         <% end %>
@@ -42,9 +41,9 @@
             <article>
               <h4> <%= experience.startdate %> / <%= experience.enddate %> </h4>
               <h3> <%= experience.position %> </h3>
-              <h4> <%= experience.company %> (<%= experience.location %>)</h4>
+              <h4> <%= experience.company %> (<%= experience.location %>) <a href="<%= experience.url %>"> <i class="fa fa-eye"></i> </a></h4>
               <p> <%= experience.duties %> </p>
-              <a href="<%= experience.url %>"> <i class="fa fa-link"></i> </a>
+
             </article>
           </li>
         <% end %>
@@ -58,14 +57,13 @@
         <li>
           <article>
             <h3> <%= activity.title %> </h3>
-            <h4> <%= activity.kind %> </h4>
+            <h4> <%= activity.kind %> <a href="<%= activity.url %>"> <i class="fa fa-eye"></i> </a></h4>
             <p> <%= activity.institution %> </p>
             <p> <%= activity.description %> </p>
-            <a href="<%= activity.url %>"> <i class="fa fa-link"></i> </a>
           </article>
         </li>
         <% end %>
-    </ul>
+      </ul>
     </div>
   </div>
   <script type="text/javascript" src="cv.js"></script>
