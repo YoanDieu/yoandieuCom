@@ -6,20 +6,30 @@
 <h1> Contact </h1>
 
 <%= form_tag contact_send_path, method: "post" do %>
-  <p> Prénom: </p>
-  <input name="contact[firstname]" type="text">
+  <div class="field">
+    <p> Prénom: </p>
+    <input name="contact[firstname]" type="text">
+  </div>
 
-  <p> Nom: </p>
-  <input name="contact[lastname]" type="text">
+  <div class="field">
+    <p> Nom: </p>
+    <input name="contact[lastname]" type="text">
+  </div>
 
-  <p> Email: </p>
-  <input name="contact[email]" type="text">
+  <div class="field">
+    <p> Email: </p>
+    <input name="contact[email]" type="text">
+  </div>
 
-  <p> Sujet: </p>
-  <input name="contact[subject]" type="text">
+  <div class="field">
+    <p> Sujet: </p>
+    <input name="contact[subject]" type="text">
+  </div>
 
-  <p> Message: </p>
-  <textarea name="contact[message]"></textarea>
+  <div class="field text">
+    <p> Message: </p>
+    <textarea name="contact[message]"></textarea>
+  </div>
 
   <input type="submit" value="Envoyer !">
 <% end %>
