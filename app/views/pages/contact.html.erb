@@ -4,8 +4,17 @@
 
 <main id="main" class="contact">
 <h1> Contact </h1>
-
+<% if flash[:success] %>
+  <div class="success">
+    <%= flash[:success] %>
+  </div>
+<% elsif flash[:error] %>
+  <div class="error">
+    <%= flash[:error] %>
+  </div>
+<% end %>
 <%= form_tag contact_send_path, method: "post" do %>
+
   <div class="field">
     <p> Prénom: </p>
     <input name="contact[firstname]" type="text">

@@ -23,18 +23,17 @@ module Yoandieu
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
 
+    ActionMailer::Base.smtp_settings = {
+      address: "smtp.mandrillapp.com",
+      port: 587,
+      :user_name => ENV["user_name"],
+      :password => ENV["password"],
+      enable_starttls_auto: true,
+      authentication: "login"
+    }
+
+    ActionMailer::Base.delivery_method = :smtp
+    ActionMailer::Base.default charset: "utf-8"
 
   end
 end
-
-ActionMailer::Base.smtp_settings = {
-  address: "smtp.mandrillapp.com",
-  port: 587,
-  :user_name => ENV["user_name"],
-  :password => ENV["password"],
-  enable_starttls_auto: true,
-  authentication: "login"
-}
-
-ActionMailer::Base.delivery_method = :smtp
-ActionMailer::Base.default charset: "utf-8"

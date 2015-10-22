@@ -14,6 +14,30 @@
     color: white;
   }
 
+  div.success {
+    display: block;
+    width: 80%;
+    margin: 20px auto;
+    background-color: #41e150;
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    padding: 5px;
+  }
+
+  div.error {
+    display: block;
+    width: 80%;
+    margin: 20px auto;
+    background-color: #e14141;
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    padding: 5px;
+  }
+
   form {
     position: relative;
     display: block;
@@ -26,6 +50,7 @@
     box-sizing: border-box;
     padding: 4%;
     padding-bottom: 20px;
+    padding-top: 20px;
     //box-shadow: 1px 1px 5px #245567;
     margin-bottom: 100px;
 
@@ -91,16 +116,18 @@
 
     input {
       display: block;
-      width: 100px;
+      width: 120px;
       margin: 0 auto;
       box-shadow: none;
       background-color: #333332;
       color: white;
       transition: all ease 0.5s;
       border: none;
-      border-radius: 20px;
-      padding: 10px;
+      border-radius: 30px;
+      padding: 15px;
       text-transform: uppercase;
+      font-size: 14px;
+      font-weight: bold;
 
       &:hover {
         box-shadow: none;

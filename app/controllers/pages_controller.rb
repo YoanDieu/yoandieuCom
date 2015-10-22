@@ -26,6 +26,9 @@ class PagesController < ApplicationController
 
     if @contact.save
      ContactMailer.contact_email(@contact).deliver
+     flash[:success] = "Votre demande de contact à bien été prise en compte !"
+    else
+      flash[:error] = "Un problème est survenu, votre demande de contact n'a pas été prise en compte, veuillez réésayer"
     end
 
     redirect_to '/contact'

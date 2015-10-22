@@ -91,6 +91,10 @@ i.fa-chevron-down{
   font-size: 50px;
   text-align: center;
   transition: all ease 1s;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 main{
