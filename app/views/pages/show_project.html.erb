@@ -2,11 +2,28 @@
 
 <%= render 'jumbotron', pagetitle: @project.title, pagejumbo: @project.thumb, bandtitle: false, bandcontent: false, credits: false %>
 
-<main class="projects" id="main">
+<main class="showprojects" id="main">
 
 
 
   <article>
     <h1><%= @project.title %></h1>
+    <div class="thumb">
+      <img src="<%= @project.thumb %>">
+    </div>
+    <div class="technos">
+      <% @project.technologies.each do |tech|%>
+        <img src="/assets/<%= tech.logo %>">
+      <% end %>
+    </div>
+
+    <p> <%= @project.description %></p>
+    <p> Le github du projet: <a href="<%= @project.github %>"> <%= @project.github %> </a></p>
+    <% if @project.twitter.length < 1 %>
+      <p> Le twitter du projet: <a href="<%= @project.twitter %>"> <%= @project.twitter %> </a></p>
+    <% end %>
+    <% if @project.url.length < 1 %>
+      <p> Le site du projet: <a href="<%= @project.url %>"> <%= @project.url %> </a></p>
+    <% end %>
   </article>
 </main>
