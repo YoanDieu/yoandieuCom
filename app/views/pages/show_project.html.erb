@@ -9,11 +9,11 @@
   <article>
     <h1><%= @project.title %></h1>
     <div class="thumb">
-      <img src="<%= @project.thumb %>">
+      <%= image_tag "#{@project.thumb}" %>
     </div>
     <div class="technos">
       <% @project.technologies.each do |tech|%>
-        <img src="/assets/<%= tech.logo %>">
+      <%= image_tag "#{tech.logo}" %>
       <% end %>
     </div>
 
