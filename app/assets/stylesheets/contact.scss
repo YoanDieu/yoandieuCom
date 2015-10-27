@@ -85,6 +85,10 @@
         }
 
       }
+
+      input.errorBorder, textarea.errorBorder {
+        border: 2px solid red;
+      }
     }
 
 
@@ -143,6 +147,9 @@
         border: none;
       }
     }
+    input.errorBorder, textarea.errorBorder {
+      border: 2px solid red;
+    }
   }
 }
 
@@ -168,6 +175,10 @@
 
         textarea{
           width: 250px;
+        }
+
+        input.errorBorder, textarea.errorBorder {
+          border: 2px solid red;
         }
       }
     }
@@ -200,6 +211,10 @@
 
         textarea{
           width: 100%;
+        }
+
+        input.errorBorder, textarea.errorBorder {
+          border: 2px solid red;
         }
       }
 

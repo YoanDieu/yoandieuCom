@@ -13,31 +13,51 @@
     <%= flash[:error] %>
   </div>
 <% end %>
-<%= form_tag contact_send_path, method: "post" do %>
+<%= form_tag contact_path, method: "post" do %>
 
   <div class="field">
     <p> Prénom: </p>
-    <input name="contact[firstname]" type="text">
+    <% if @contact.errors[:firstname][0]  %>
+      <input name="contact[firstname]" type="text" class="errorBorder">
+    <% else %>
+      <input name="contact[firstname]" type="text">
+    <% end %>
   </div>
 
   <div class="field">
     <p> Nom: </p>
-    <input name="contact[lastname]" type="text">
+    <% if @contact.errors[:lastname][0] %>
+      <input name="contact[lastname]" type="text" class="errorBorder">
+    <% else %>
+      <input name="contact[lastname]" type="text">
+    <% end %>
   </div>
 
   <div class="field">
     <p> Email: </p>
-    <input name="contact[email]" type="text">
+    <% if @contact.errors[:email][0] %>
+      <input name="contact[email]" type="text" class="errorBorder">
+    <% else %>
+      <input name="contact[email]" type="text">
+    <% end %>
   </div>
 
   <div class="field">
     <p> Sujet: </p>
-    <input name="contact[subject]" type="text">
+    <% if @contact.errors[:subject][0] %>
+      <input name="contact[subject]" type="text" class="errorBorder">
+    <% else %>
+      <input name="contact[subject]" type="text">
+    <% end %>
   </div>
 
   <div class="field text">
     <p> Message: </p>
-    <textarea name="contact[message]"></textarea>
+    <% if @contact.errors[:message][0] %>
+      <textarea name="contact[message]" type="text" class="errorBorder"> </textarea>
+    <% else %>
+      <textarea name="contact[message]" type="text"> </textarea>
+    <% end %>
   </div>
 
   <input type="submit" value="Envoyer !">

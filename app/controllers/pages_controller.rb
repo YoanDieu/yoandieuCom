@@ -18,6 +18,7 @@ class PagesController < ApplicationController
 
   def contact
     @cont = true
+    @contact = Contact.new
   end
 
   def contact_send
@@ -26,11 +27,12 @@ class PagesController < ApplicationController
     if @contact.save
      ContactMailer.contact_email(@contact).deliver
      flash[:success] = "Votre demande de contact à bien été prise en compte !"
+       redirect_to '/contact'
     else
-      flash[:error] = "Un problème est survenu, votre demande de contact n'a pas été prise en compte, veuillez réésayer"
+      render 'contact'
     end
 
-    redirect_to '/contact'
+
   end
 
   def admin
