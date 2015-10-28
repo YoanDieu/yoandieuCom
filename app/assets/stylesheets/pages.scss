@@ -181,7 +181,7 @@ main.home {
   }
 }
 
-@media screen and (min-width: 600px) and (max-width: 1000px){
+@media handheld and (min-width: 600px) and (max-width: 1000px){
 
     div.jumbotron{
       div.filter {
