@@ -181,7 +181,7 @@ main.home {
   }
 }
 
-@media all and (min-width: 600px) and (max-width: 1000px){
+@media screen and (min-width: 600px) and (max-width: 1000px){
 
     div.jumbotron{
       div.filter {
@@ -195,34 +195,86 @@ main.home {
   main.home {
 
     div.container {
-      width: 80%;
+      width: 95%;
       article.aPropos{
 
         margin-left: auto;
         margin-right: auto;
         padding: 6%;
 
+        h2 {
+          font-size: 4em;
+        }
+
         div.thumb {
-          height: 320px;
-          width: 320px;
+          height: 720px;
+          width: 720px;
           margin: 0 auto;
+          border: 4px solid white;
 
           div.caption {
+            height: 340px;
 
           p{
             padding: 10px;
-            font-size: 16px;
+            font-size: 3.1em;
+            line-height: 1.2;
           }
+          }
+
+          &:hover{
+            box-shadow: inset 0px 0px 36px 6px rgba(6,170,231,1);
+            border: 4px solid rgba(6,170,231,1);
+            div.caption {
+                margin-top: -340px;
+            }
           }
         }
 
+        div.quote {
+
+          border-left: 6px solid rgba(6,170,231,1);
+          border-bottom: 4px solid rgba(6,170,231,1);
+          border-top: 6px solid rgba(6,170,231,1);
+          border-right: 4px solid rgba(6,170,231,1);
+          border-radius: 30px;
+          border-top-left-radius: 0;
+          padding: 4%;
+          box-sizing: border-box;
+
+          p{
+
+            span.citation {
+              font-size: 2em;
+            }
+
+          }
+        }
+
+        p {
+          font-size: 2.5em;
+          margin-bottom: 120px;
+
+
+        }
+
+        div.source {
+
+          p {
+            font-size: 2.5em;
+
+            span{
+              font-size: 1em;
+            }
+          }
+        }
 
       }
     }
   }
 }
 
-@media all and (min-width: 1001px) and (max-width: 1559px) {
+@media screen and (min-width: 1001px) and (max-width: 1559px) {
 
 
   main.home {
@@ -337,7 +389,7 @@ main.home {
   }
 }
 
-@media all and (min-width: 1560px) {
+@media screen and (min-width: 1560px) {
 
 
   main.home {

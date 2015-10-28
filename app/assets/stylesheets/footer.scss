@@ -1,7 +1,8 @@
 .warper {
-  display: static;
+  display: block;
   position: relative;
   margin-bottom: 80px;
+  width: 100%;
 }
 
 footer {
@@ -88,7 +89,34 @@ footer {
   }
 }
 
-@media all and (min-width: 600px){
+@media screen and (min-width: 600px) and (max-width: 1050px){
+  footer {
+
+    nav.social{
+
+      ul {
+
+        li {
+
+
+          a{
+            margin-left: 35px;
+             i {
+               font-size: 4.5em;
+             }
+           }
+         }
+       }
+     }
+
+     nav.sources{
+       font-size: 2em;
+       height: 70px;
+     }
+   }
+}
+
+@media screen and (min-width: 1051px){
   footer {
     nav.social{
 

@@ -108,7 +108,7 @@ main.noJumbotron {
 
 }
 
-@media all and (min-width: 320px) and (max-width: 599px) {
+@media screen and (min-width: 320px) and (max-width: 599px) {
     div.jumbotron{
       min-height: 350px;
 
@@ -150,34 +150,36 @@ main.noJumbotron {
 
 
 
-@media all and (min-width: 600px) and (max-width: 1000px) {
+@media screen and (min-width: 600px) and (max-width: 1000px) {
   div.jumbotron{
-    min-height: 400px;
+    display: block;
+    min-height: 1000px;
+    width: 100%;
 
     h1 {
-      margin-top: 120px;
-      font-size: 50px;
+      margin-top: 260px;
+      font-size: 6.5em;
     }
 
     div.filter {
-      height: 100px;
+      height: 450px;
       padding-top: 15px;
       padding-left: 30px;
 
       h2 {
-        font-size: 20px;
+        font-size: 4em;
         margin-top: 0px;
       }
 
       p{
-        font-size: 15px;
+        font-size: 3em;
       }
     }
   }
 
   main{
     position: absolute;
-    margin-top: 450px;
+    margin-top: 1050px;
     width: 100%;
   }
 
@@ -187,14 +189,15 @@ main.noJumbotron {
   }
 
   i.fa-chevron-down{
-    top: 220px;
+    font-size: 6em;
+    top: 390px;
     transition: all ease 0.4s;
   }
 
 
 }
 
-@media all and (min-width: 1001px) and (max-width: 1559px) {
+@media screen and (min-width: 1001px) and (max-width: 1559px) {
   div.jumbotron{
     min-height: 500px;
 
@@ -231,7 +234,7 @@ main.noJumbotron {
 }
 
 
-@media all and (min-width: 1560px) {
+@media screen and (min-width: 1560px) {
   div.jumbotron{
     min-height: 700px;
 
