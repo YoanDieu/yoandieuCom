@@ -17,7 +17,7 @@
           </div>
           <div class="technos">
             <% project.technologies.each do |tech|%>
-            <img src="assets/<%= tech.logo %>">
+            <%= image_tag "#{tech.logo}" %>
             <% end %>
           </div>
           <p>Description: <%= project.description[0..140] %>... </p>
