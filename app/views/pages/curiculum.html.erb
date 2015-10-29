@@ -8,9 +8,9 @@
 
   <nav id="cv">
     <ul>
-      <li id="formationsBtn"> Formations </li>
-      <li id="experiencesBtn"> Expériences </li>
-      <li id="activitesBtn"> Activités </li>
+      <li id="formationsBtn" title="Voir mes formations"> Formations </li>
+      <li id="experiencesBtn" title="Voir mes expériences"> Expériences </li>
+      <li id="activitesBtn" title="Voir mes activités"> Activités </li>
     </ul>
   </nav>
 
@@ -24,7 +24,7 @@
           <article>
           <h4> <%= formation.startdate %> / <%= formation.enddate %> </h4>
           <h3> <%= formation.name %> </h3>
-          <h4> <%= formation.institution %> <a href="http://<%= formation.url %>"> <i class="fa fa-eye"></i> </a> </h4>
+          <h4> <%= formation.institution %> <a href="http://<%= formation.url %>"  title="Aller sur le site de <%= formation.institution %>"> <i class="fa fa-eye"></i> </a> </h4>
           <p> <%= formation.skills %> </p>
           <p> <%= formation.certificate %> </p>
           </article>

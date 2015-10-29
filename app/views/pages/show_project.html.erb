@@ -1,15 +1,15 @@
 <%= render 'menu' %>
 
-<%= render 'jumbotron', pagetitle: @project.title, pagejumbo: @project.thumb, bandtitle: false, bandcontent: false, credits: false %>
+<%= render 'jumbotron', pagetitle: @project.title, pagejumbo: @project.cover, bandtitle: "Résumé:", bandcontent: @project.resume, credits: false %>
 
 <main class="showprojects" id="main">
 
 
 
   <article>
-    <h1><%= @project.title %></h1>
+    <h1><%= @project.startdate %></h1><h1><%= @project.enddate %></h1>
     <div class="thumb">
-      <%= image_tag "#{@project.thumb}" %>
+      <%= image_tag "#{@project.cover(:medium)}" %>
     </div>
     <div class="technos">
       <% @project.technologies.each do |tech|%>

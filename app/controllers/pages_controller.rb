@@ -52,7 +52,6 @@ class PagesController < ApplicationController
 
   def show_project
     @project = Project.find(params[:id])
-    puts @project.thumb
   end
 
   def contact_params
