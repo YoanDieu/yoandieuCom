@@ -197,7 +197,7 @@ main.noJumbotron {
 
 }
 
-@media screen and (min-width: 1001px) and (max-width: 1559px) {
+@media all and (min-width: 1001px) and (max-width: 1559px) {
   div.jumbotron{
     min-height: 500px;
 
@@ -234,7 +234,7 @@ main.noJumbotron {
 }
 
 
-@media screen and (min-width: 1560px) {
+@media all and (min-width: 1560px) {
   div.jumbotron{
     min-height: 700px;
 
