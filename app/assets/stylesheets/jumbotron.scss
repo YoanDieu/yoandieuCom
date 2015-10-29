@@ -150,7 +150,7 @@ main.noJumbotron {
 
 
 
-@media handheld and (min-width: 600px) and (max-width: 1000px) {
+@media all and (min-width: 600px) and (max-width: 1000px) {
   div.jumbotron{
     display: block;
     min-height: 1000px;
