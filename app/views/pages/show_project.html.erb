@@ -21,13 +21,13 @@
     <div class="intel">
       <div class="technos">
         <% @project.technologies.each do |tech|%>
-        <%= image_tag "#{tech.logo}" %>
+          <p><%= tech.name %> <%= image_tag "#{tech.logo}" %> </p>
         <% end %>
       </div>
       <div class="links">
-        <i class="fa fa-github"></i> <p> Voir sur Github: <%= @project.github %></p>
-        <i class="fa fa-twitter"></i> <p> Voir sur twitter: <%= @project.twitter %></p>
-        <i class="fa fa-link"></i> <p> Voir sur le web: <%= @project.url %></p>
+        <i class="fa fa-github"></i> <p> Voir sur Github: <span><%= @project.github %></span></p>
+        <i class="fa fa-twitter"></i> <p> Voir sur twitter: <span><%= @project.twitter %></span></p>
+        <i class="fa fa-link"></i> <p> Voir sur le web: <span><%= @project.url %></span></p>
       </div>
 
     </div>
