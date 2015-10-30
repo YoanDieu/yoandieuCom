@@ -3,27 +3,37 @@
 <%= render 'jumbotron', pagetitle: @project.title, pagejumbo: @project.cover, bandtitle: "Résumé:", bandcontent: @project.resume, credits: false %>
 
 <main class="showprojects" id="main">
-
+  <h1> Présentation </h1>
 
 
   <article>
-    <h1><%= @project.startdate %></h1><h1><%= @project.enddate %></h1>
-    <div class="thumb">
-      <%= image_tag "#{@project.cover(:medium)}" %>
-    </div>
-    <div class="technos">
-      <% @project.technologies.each do |tech|%>
-      <%= image_tag "#{tech.logo}" %>
-      <% end %>
+    <div class="time">
+      <h2><%= @project.startdate %></h2>
+      <i class="fa fa-long-arrow-right"></i>
+      <h2><%= @project.enddate %></h2>
     </div>
 
-    <p> <%= @project.description %></p>
-    <p> Le github du projet: <a href="<%= @project.github %>"> <%= @project.github %> </a></p>
-    <% if @project.twitter.length < 1 %>
-      <p> Le twitter du projet: <a href="<%= @project.twitter %>"> <%= @project.twitter %> </a></p>
-    <% end %>
-    <% if @project.url.length < 1 %>
-      <p> Le site du projet: <a href="<%= @project.url %>"> <%= @project.url %> </a></p>
-    <% end %>
+    <h1> <%= @project.title %> </h1>
+    <div class="thumb">
+      <%= image_tag "#{@project.cover}" %>
+    </div>
+
+    <div class="intel">
+      <div class="technos">
+        <% @project.technologies.each do |tech|%>
+        <%= image_tag "#{tech.logo}" %>
+        <% end %>
+      </div>
+      <div class="links">
+        <i class="fa fa-github"></i> <p> Voir sur Github: <%= @project.github %></p>
+        <i class="fa fa-twitter"></i> <p> Voir sur twitter: <%= @project.twitter %></p>
+        <i class="fa fa-link"></i> <p> Voir sur le web: <%= @project.url %></p>
+      </div>
+
+    </div>
+
+    <p>Description: <%= @project.description.html_safe %></p>
+
+    <p> Dernière modification le: <%= @project.updated_at.strftime("%C %b %Y à %H:%m") %></p>
   </article>
 </main>

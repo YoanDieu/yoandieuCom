@@ -14,6 +14,108 @@ main.curriculum{
     color: white;
   }
 
+  div.personalInfos {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    border-bottom: 1px solid #d3d3d3;
+    border-top: 1px solid #d3d3d3;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 50px;
+    z-index: 5;
+
+
+    div.thumb {
+      display: block;
+      width: 280px;
+      height: 280px;
+      overflow: hidden;
+      z-index: 1;
+      transition: all ease 0.5s;
+      margin: 0 auto;
+      margin-bottom: 30px;
+      border: 1px solid white;
+      border-radius: 50%;
+      vertical-align: middle;
+
+      img {
+        display: block;
+        position: relative;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+        z-index: -20;
+
+      }
+
+      div.caption {
+        display: block;
+        z-index: 0;
+        height: 200px;
+        width: 100%;
+        background-color: rgba(6,170,231,0.5);
+        margin-top: 0;
+        transition: all ease 1s;
+
+        p{
+          display: block;
+          width: 60%;
+          margin: 0px auto;
+          padding: 15px 0;
+          color: white;
+          text-align: center;
+          line-height: 1.8;
+
+        }
+      }
+
+      &:hover{
+        box-shadow: inset 0px 0px 6px 1px rgba(6,170,231,1);
+        border: 1px solid rgba(6,170,231,1);
+        div.caption {
+            margin-top: -140px;
+        }
+      }
+    }
+
+    div.col{
+      display:block;
+      vertical-align: middle;
+      margin-right: 2%;
+      width: 100%;
+      padding-left: 10%;
+
+      &:last-child{
+        margin-right: 0;
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 1;
+        margin-bottom: 20px;
+
+        span.cyan{
+          display: inline-block;
+          color: white;
+          background-color: #06aae7;
+          font-weight: bolder;
+          font-size: 20px;
+          padding: 1%;
+          padding-left: 2%;
+          padding-right: 2%;
+          box-sizing: border-box;
+          height: 30px;
+          vertical-align: middle;
+        }
+      }
+    }
+
+
+  }
+
 nav#cv {
   ul {
     display: block;
@@ -275,6 +377,21 @@ nav#cv {
       }
     }
 
+    div.personalInfos{
+
+      div.col{
+        position: relative;
+        display: inline-block;
+        width: 35%;
+        vertical-align: top;
+
+        &:last-child{
+          width: 40%;
+          padding-left: 5%;
+        }
+      }
+    }
+
     div.cvWarper{
       width: 70%;
       margin-left: auto;
@@ -284,7 +401,7 @@ nav#cv {
 
 }
 
-@media all and (min-width: 1001px) {
+@media all and (min-width: 1001px) and (max-width: 1499px){
   main.curriculum{
     nav#cv {
       ul {
@@ -293,6 +410,97 @@ nav#cv {
         li {
           font-size: 18px;
           margin: 0px 1.2%;
+        }
+      }
+    }
+
+    div.personalInfos{
+      width: 60%;
+
+      div.col{
+        position: relative;
+        display: inline-block;
+        width: 30%;
+        vertical-align: top;
+
+        &:last-child{
+          width: 45%;
+          padding-left: 5%;
+        }
+
+        p {
+          font-size: 18px;
+        }
+      }
+    }
+
+    div.cvWarper{
+      width: 50%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+}
+
+
+@media all and (min-width: 1500px) {
+  main.curriculum{
+    nav#cv {
+      ul {
+        width: 60%;
+
+        li {
+          font-size: 18px;
+          margin: 0px 1.2%;
+        }
+      }
+    }
+
+    div.personalInfos{
+      width: 60%;
+      padding-top: 60px;
+      padding-bottom: 60px;
+
+      h1 {
+        display: block;
+        text-align: center;
+        width: 220px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 50px;
+        font-size: 30px;
+        font-weight: bold;
+        text-transform: uppercase;
+        background-color: #06aae7;
+        color: white;
+      }
+
+      div.thumb {
+        display: inline-block;
+        vertical-align: middle;
+
+        div.caption{
+          font-weight: bold;
+        }
+      }
+
+      div.col{
+        position: relative;
+        display: inline-block;
+        width: 25%;
+        vertical-align: middle;
+        margin-left: 0%;
+        padding-left: 5%;
+
+        &:last-child{
+          width: 30%;
+          padding-left: 0%;
+          margin-left: 5%;
+        }
+
+        p {
+          font-size: 18px;
         }
       }
     }
