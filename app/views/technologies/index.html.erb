@@ -21,7 +21,7 @@
       <% @technologies.each do |technology| %>
         <tr>
           <td><%= technology.name %></td>
-          <td><%= technology.logo %></td>
+          <td><%= image_tag "#{technology.logo(:thumb)}" %></td>
           <td><%= technology.description %></td>
           <td><%= technology.link %></td>
           <td><%= technology.doc %></td>
