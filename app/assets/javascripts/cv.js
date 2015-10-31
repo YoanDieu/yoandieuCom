@@ -19,13 +19,13 @@ $experiencesBtn.style.backgroundColor = "white";
 
 if (getComputedStyle($formations.firstChild.nextSibling.nextSibling.nextSibling).height > getComputedStyle($experiences.firstChild.nextSibling.nextSibling.nextSibling).height || getComputedStyle($formations.firstChild.nextSibling.nextSibling.nextSibling).height > getComputedStyle($activites.firstChild.nextSibling.nextSibling.nextSibling).height) {
   $cvWarper.style.height = getComputedStyle($formations.firstChild.nextSibling.nextSibling.nextSibling).height;
-  console.log($formations.firstChild.nextSibling.nextSibling.nextSibling);
+  console.log(getComputedStyle($formations.firstChild.nextSibling.nextSibling.nextSibling).height);
 } else if (getComputedStyle($experiences.firstChild.nextSibling.nextSibling.nextSibling).height > getComputedStyle($formations.firstChild.nextSibling.nextSibling.nextSibling).height ||getComputedStyle($experiences.firstChild.nextSibling.nextSibling.nextSibling).height > getComputedStyle($activites.firstChild.nextSibling.nextSibling.nextSibling).height) {
   $cvWarper.style.height = getComputedStyle($experiences.firstChild.nextSibling.nextSibling.nextSibling).height;
-  console.log($experiences.firstChild.nextSibling.nextSibling.nextSibling);
+  console.log(getComputedStyle($experiences.firstChild.nextSibling.nextSibling.nextSibling).height);
 } else if (getComputedStyle($activites.firstChild.nextSibling.nextSibling.nextSibling).height > getComputedStyle($formations.firstChild.nextSibling.nextSibling.nextSibling).height || getComputedStyle($activites.firstChild.nextSibling.nextSibling.nextSibling).height > getComputedStyle($experiences.firstChild.nextSibling.nextSibling.nextSibling).height) {
   $cvWarper.style.height = getComputedStyle($activites.firstChild.nextSibling.nextSibling.nextSibling).height;
-  console.log($activites.firstChild.nextSibling.nextSibling.nextSibling);
+  console.log(getComputedStyle($activites.firstChild.nextSibling.nextSibling.nextSibling).height);
 }
 
 function setActive() {
