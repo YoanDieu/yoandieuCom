@@ -10,9 +10,9 @@ class PagesController < ApplicationController
 
   def curiculum
     @curi = true
-    @formations = Formation.all
-    @experiences = Experience.all
-    @activities = Activity.all
+    @formations = Formation.all.reverse
+    @experiences = Experience.all.reverse
+    @activities = Activity.all.reverse
 
   end
 
