@@ -25,9 +25,9 @@
         <% end %>
       </div>
       <div class="links">
-        <i class="fa fa-github"></i> <p> Voir sur Github: <span><%= @project.github %></span></p>
-        <i class="fa fa-twitter"></i> <p> Voir sur twitter: <span><%= @project.twitter %></span></p>
-        <i class="fa fa-link"></i> <p> Voir sur le web: <span><%= @project.url %></span></p>
+        <a href="http://<%= @project.github %>"><i class="fa fa-github"></i></a> <p> Voir sur Github: <span><%= @project.github %></span></p>
+        <a href="http://<%= @project.twitter %>"><i class="fa fa-twitter"></i></a> <p> Voir sur twitter: <span><%= @project.twitter %></span></p>
+          <a href="http://<%= @project.url %>"><i class="fa fa-link"></i></a> <p> Voir sur le web: <span><%= @project.url %></span></p>
       </div>
 
     </div>
