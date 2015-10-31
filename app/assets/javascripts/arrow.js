@@ -34,11 +34,11 @@ function getNumericalTop (htmlElement){
 
 $( document ).ready(function() {
   setInterval(function(){
-    $arrow.style.top = (getNumericalTop($arrow) + 10) + "px";
+    $arrow.style.textShadow = "0px 0px 6px rgba(6,170,231,1)";
   }, 500);
 
   setInterval(function(){
-    $arrow.style.top = initialTop + "px";
+    $arrow.style.textShadow = "0px 0px 0px rgba(6,170,231,0)";
   }, 1000);
 
 })
