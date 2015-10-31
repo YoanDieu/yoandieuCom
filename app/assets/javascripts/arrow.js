@@ -34,7 +34,7 @@ function getNumericalTop (htmlElement){
 
 $( document ).ready(function() {
   setInterval(function(){
-    $arrow.style.textShadow = "0px 0px 6px rgba(6,170,231,1)";
+    $arrow.style.textShadow = "0px 0px 12px rgba(6,170,231,1)";
   }, 500);
 
   setInterval(function(){
