@@ -12,9 +12,11 @@
         <article>
           <h1> <%= project.title %> </h1>
 
-          <div class="thumb">
-            <img src="<%=project.cover%>">
-          </div>
+          <a href="project/<%= project.id %>" title="Plus d'infos" class="showproject">
+            <div class="thumb">
+              <img src="<%=project.cover%>">
+            </div>
+          </a>
           <div class="technos">
             <% project.technologies.each do |tech|%>
             <%= image_tag "#{tech.logo}" %>
@@ -32,9 +34,6 @@
               </div>
               <div class="iconContainer">
                 <a href="/project/<%= project.id %>" title="Plus d'infos"><i class="fa fa-info-circle"></i></a>
-              </div>
-              <div class="iconContainer">
-                <a href="<%= project.url %>" title="Voir sur le Web"><i class="fa fa-eye"></i></a>
               </div>
             </div>
             <div class="label">
