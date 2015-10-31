@@ -19,10 +19,13 @@ $experiencesBtn.style.backgroundColor = "white";
 
 if (getComputedStyle($formations).height > getComputedStyle($experiences).height || getComputedStyle($formations).height > getComputedStyle($activites).height) {
   $cvWarper.style.height = getComputedStyle($formations).height;
+  console.log($cvWarper.style.height);
 } else if (getComputedStyle($experiences).height > getComputedStyle($formations).height ||getComputedStyle($experiences).height > getComputedStyle($activites).height) {
   $cvWarper.style.height = getComputedStyle($experiences).height;
+  console.log($cvWarper.style.height);
 } else if (getComputedStyle($activites).height > getComputedStyle($formations).height || getComputedStyle($activites).height > getComputedStyle($experiences).height) {
   $cvWarper.style.height = getComputedStyle($activites).height;
+  console.log($cvWarper.style.height);
 }
 
 function setActive() {
