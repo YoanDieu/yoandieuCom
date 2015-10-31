@@ -129,6 +129,7 @@ header {
           padding-left: 0;
           background-color: none;
           transition: all ease 0.5s;
+          right: 0;
 
         }
 
@@ -284,8 +285,10 @@ nav.rightMenu {
           text-decoration: none;
 
           li {
+            position: relative;
             background-color: none;
             transition: none;
+            width: 80%;
             padding: 7.5%;
             padding-left: 0%;
             vertical-align: middle;
@@ -293,14 +296,16 @@ nav.rightMenu {
 
           &.active {
             background-color: white;
-
+            width: 15%;
             li {
+
               color: #06aae7;
             }
           }
 
           &:hover{
             background-color: #06aae7;
+            width: 15%;
             &.active {
               background-color: #06aae7;
               li {

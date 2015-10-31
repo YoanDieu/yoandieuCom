@@ -1,7 +1,9 @@
 $arrow = document.getElementById("arrow");
 $pageTitle = document.getElementById("pageTitle");
 var initialTop = getComputedStyle($arrow).top;
+console.log(initialTop);
 initialTop = parseInt(initialTop[0] + "" + initialTop[1] + "" + initialTop[2]);
+console.log(initialTop);
 
 
 function scrolling(){
@@ -30,12 +32,15 @@ function getNumericalTop (htmlElement){
   return parseInt(top);
 }
 
-setInterval(function(){
-  $arrow.style.top = (getNumericalTop($arrow) + 10) + "px";
-}, 500);
+$( document ).ready(function() {
+  setInterval(function(){
+    $arrow.style.top = (getNumericalTop($arrow) + 10) + "px";
+  }, 500);
 
-setInterval(function(){
-  $arrow.style.top = initialTop + "px";
-}, 1000);
+  setInterval(function(){
+    $arrow.style.top = initialTop + "px";
+  }, 1000);
+
+})
 
 $arrow.addEventListener("click", scrolling, false);

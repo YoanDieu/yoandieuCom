@@ -29,6 +29,7 @@ class PagesController < ApplicationController
      flash[:success] = "Votre demande de contact à bien été prise en compte !"
        redirect_to '/contact'
     else
+      flash[:error] = "Veuillez renseigner les champs indiqués en rouge."
       render 'contact'
     end
 

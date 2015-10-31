@@ -1,6 +1,6 @@
 <%= render 'menu' %>
 
-<%= render 'jumbotron', pagetitle: "Contact", pagejumbo: 'tore1.jpg', bandtitle: false, bandcontent: false, credits: false %>
+<%= render 'jumbotron', pagetitle: "Contact", pagejumbo: 'tore1.jpg', bandtitle: "Échangez", bandcontent: "Ci-dessous ce trouve un formulaire de contact, aucune de vos informations personel ne sera conservée au divulguez, les champs accompagnés d'un * doivent être renseignés.", credits: "Crédits photos: Non renseignés" %>
 
 <main id="main" class="contact">
 <h1> Contact </h1>
@@ -25,7 +25,7 @@
   </div>
 
   <div class="field">
-    <p> Nom: </p>
+    <p> Nom*: </p>
     <% if @contact.errors[:lastname][0] %>
       <input name="contact[lastname]" type="text" class="errorBorder">
     <% else %>
@@ -34,7 +34,7 @@
   </div>
 
   <div class="field">
-    <p> Email: </p>
+    <p> Email*: </p>
     <% if @contact.errors[:email][0] %>
       <input name="contact[email]" type="text" class="errorBorder">
     <% else %>
@@ -43,7 +43,7 @@
   </div>
 
   <div class="field">
-    <p> Sujet: </p>
+    <p> Sujet*: </p>
     <% if @contact.errors[:subject][0] %>
       <input name="contact[subject]" type="text" class="errorBorder">
     <% else %>
@@ -52,7 +52,7 @@
   </div>
 
   <div class="field text">
-    <p> Message: </p>
+    <p> Message*: </p>
     <% if @contact.errors[:message][0] %>
       <textarea name="contact[message]" type="text" class="errorBorder"> </textarea>
     <% else %>

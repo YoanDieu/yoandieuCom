@@ -16,7 +16,7 @@
 
   div.success {
     display: block;
-    width: 80%;
+    width: 50%;
     margin: 20px auto;
     background-color: #41e150;
     font-size: 18px;
@@ -28,7 +28,7 @@
 
   div.error {
     display: block;
-    width: 80%;
+    width: 50%;
     margin: 20px auto;
     background-color: #e14141;
     font-size: 18px;
@@ -75,6 +75,7 @@
         font-weight: bold;
         box-sizing: border-box;
         padding: 10px;
+        text-transform: lowercase;
 
         &:hover {
           border: 2px solid rgba(36,85,103,0.8);
