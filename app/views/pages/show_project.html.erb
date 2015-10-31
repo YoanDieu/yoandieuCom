@@ -14,9 +14,12 @@
     </div>
 
     <h1> <%= @project.title %> </h1>
+
     <div class="thumb">
       <%= image_tag "#{@project.cover}" %>
     </div>
+
+    <p><span>Description:</span> <%= @project.description.html_safe %></p>
 
     <div class="intel">
       <div class="technos">
@@ -32,7 +35,7 @@
 
     </div>
 
-    <p>Description: <%= @project.description.html_safe %></p>
+
 
     <p> Dernière modification le: <%= @project.updated_at.strftime("%C %b %Y à %H:%m") %></p>
   </article>
