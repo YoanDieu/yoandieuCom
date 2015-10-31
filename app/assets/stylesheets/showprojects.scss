@@ -164,8 +164,8 @@
       &:last-child{
         text-align: right;
         color: grey;
-        width: 52%;
-        margin-right: 10%;
+        width: 90%;
+        margin-right: 5%;
         right: 0;
         font-size: 14px;
       }
@@ -196,6 +196,12 @@
         width: 55%;
         margin: 0 auto;
 
+        div.thumb {
+          width: 80%;
+          overflow: hidden;
+          margin-bottom: 30px;
+        }
+
         div.time {
           margin-bottom: 50px;
 
@@ -210,12 +216,6 @@
                 right: 100px;
               }
           }
-        }
-
-        div.thumb {
-          margin-bottom: 0;
-          width: 90%;
-          overflow: hidden;
         }
 
         div.intel {
