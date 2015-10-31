@@ -28,9 +28,9 @@
         <% end %>
       </div>
       <div class="links">
-        <a href="http://<%= @project.github %>" title="Voir le repo Github"><i class="fa fa-github"></i></a> <p> Voir sur Github: <span><%= @project.github %></span></p>
-        <a href="http://<%= @project.twitter %>" title="Voir le compte twitter"><i class="fa fa-twitter"></i></a> <p> Voir sur twitter: <span><%= @project.twitter %></span></p>
-          <a href="http://<%= @project.url %>" title="Voir le site"><i class="fa fa-link"></i></a> <p> Voir sur le web: <span><%= @project.url %></span></p>
+        <a href="http://<%= @project.github %>" title="Voir le repo Github"><i class="fa fa-github"></i></a> <p> Voir sur Github: <% if @project.github.length > 0 %><span><%= @project.github %></span> <% end %></p>
+        <a href="http://<%= @project.twitter %>" title="Voir le compte twitter"><i class="fa fa-twitter"></i></a> <p> Voir sur twitter: <% if @project.twitter.length > 0 %><span><%= @project.twitter %></span><% end %></p>
+          <a href="http://<%= @project.url %>" title="Voir le site"><i class="fa fa-link"></i></a> <p> Voir sur le web: <% if @project.url.length > 0 %><span><%= @project.url %></span><% end %></p>
       </div>
 
     </div>
