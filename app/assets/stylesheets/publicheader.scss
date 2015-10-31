@@ -51,7 +51,7 @@ header {
   }
 
   nav.topMenu {
-    position: absolute;
+    position: relative;
     display: block;
     right: 0px;
     width: auto;
@@ -64,19 +64,20 @@ header {
 
       li {
         position: relative;
+        right: 15px;
         display: inline-block;
-        width: 100%;
+        width: 50px;
         vertical-align: middle;
         height: 100%;
-        padding-left: 30%;
         box-sizing: border-box;
-        text-align: center;
+        text-align: right;
         box-sizing: border-box;
         color: #06aae7;
-        padding-right: 30%;
-        padding-top: 17%;
         box-sizing: border-box;
         transition: all ease 0.5s;
+        padding: 10px;
+        padding-right: 15px;
+        padding-bottom: 15px;
 
 
         i {
