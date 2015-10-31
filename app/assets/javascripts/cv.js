@@ -17,15 +17,15 @@ var activitesActive = false;
 
 $experiencesBtn.style.backgroundColor = "white";
 
-if (getComputedStyle($formations.firstChild.nextSibling).height > getComputedStyle($experiences.firstChild.nextSibling).height || getComputedStyle($formations).height > getComputedStyle($activites.firstChild.nextSibling).height) {
-  $cvWarper.style.height = getComputedStyle($formations.firstChild.nextSibling).height;
-  console.log($cvWarper.style.height);
-} else if (getComputedStyle($experiences.firstChild.nextSibling).height > getComputedStyle($formations).height ||getComputedStyle($experiences.firstChild.nextSibling).height > getComputedStyle($activites.firstChild.nextSibling).height) {
-  $cvWarper.style.height = getComputedStyle($experiences.firstChild.nextSibling).height;
-  console.log($cvWarper.style.height);
-} else if (getComputedStyle($activites.firstChild.nextSibling).height > getComputedStyle($formations.firstChild.nextSibling).height || getComputedStyle($activites.firstChild.nextSibling).height > getComputedStyle($experiences.firstChild.nextSibling).height) {
-  $cvWarper.style.height = getComputedStyle($activites.firstChild.nextSibling).height;
-  console.log($cvWarper.style.height);
+if (getComputedStyle($formations.firstChild.nextSibling.nextSibling.nextSibling).height > getComputedStyle($experiences.firstChild.nextSibling.nextSibling.nextSibling).height || getComputedStyle($formations.firstChild.nextSibling.nextSibling.nextSibling).height > getComputedStyle($activites.firstChild.nextSibling.nextSibling.nextSibling).height) {
+  $cvWarper.style.height = getComputedStyle($formations.firstChild.nextSibling.nextSibling.nextSibling).height;
+  console.log($formations.firstChild.nextSibling.nextSibling.nextSibling);
+} else if (getComputedStyle($experiences.firstChild.nextSibling.nextSibling.nextSibling).height > getComputedStyle($formations.firstChild.nextSibling.nextSibling.nextSibling).height ||getComputedStyle($experiences.firstChild.nextSibling.nextSibling.nextSibling).height > getComputedStyle($activites.firstChild.nextSibling.nextSibling.nextSibling).height) {
+  $cvWarper.style.height = getComputedStyle($experiences.firstChild.nextSibling.nextSibling.nextSibling).height;
+  console.log($experiences.firstChild.nextSibling.nextSibling.nextSibling);
+} else if (getComputedStyle($activites.firstChild.nextSibling.nextSibling.nextSibling).height > getComputedStyle($formations.firstChild.nextSibling.nextSibling.nextSibling).height || getComputedStyle($activites.firstChild.nextSibling.nextSibling.nextSibling).height > getComputedStyle($experiences.firstChild.nextSibling.nextSibling.nextSibling).height) {
+  $cvWarper.style.height = getComputedStyle($activites.firstChild.nextSibling.nextSibling.nextSibling).height;
+  console.log($activites.firstChild.nextSibling.nextSibling.nextSibling);
 }
 
 function setActive() {
