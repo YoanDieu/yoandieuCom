@@ -64,6 +64,7 @@
     div.thumb{
       width: 95%;
       margin: 30px auto;
+      margin-bottom: 10px;
       img {
         width: 100%;
       }
@@ -72,36 +73,69 @@
     div.intel{
       display: block;
       position: relative;
-      height: 180px;
-      div.technos{
-        display: inline-block;
-        height: 90px;
-        width: 45%;
-        margin-left: 5%;
+      height: auto;
+      margin-bottom: 0;
 
-        img {
-          display: block;
+      div.technos{
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        margin-left: 5%;
+        margin-top: 0;
+        text-align: center;
+
+        p{
           position: relative;
-          height: 25px;
-          margin-top: 8px;
+          display: inline-block;
+          color: black;
+          text-align: right;
+          height: 30%;
+          width: auto;
+          margin-bottom: 10px;
+
+          &:last-child{
+            position: relative;
+            display: inline-block;
+            color: black;
+            text-align: right;
+            height: 30%;
+            margin-bottom: 10px;
+
+          }
+
+          img {
+            display: inline-block;
+            position: relative;
+            height: 15px;
+          }
         }
       }
 
       div.links {
-        display: inline-block;
-        width: 45%;
+        display: block;
+        width: 100%;
         vertical-align: top;
-
-        i{
-          display: block;
-          height: 30px;
-          font-size: 22px;
-          margin-bottom: 10px;
+        text-align: center;
+        a{
+          display: inline-block;
+          vertical-align: middle;
+          text-decoration: none;
+          color: #06aae7;
+          margin: 15px 20px;
+          margin-top: 10px;
+          i{
+            display: block;
+            height: 42px;
+            font-size: 42px;
+          }
         }
 
         p{
           position: relative;
           display: none;
+          span{
+            display: visible;
+          }
         }
       }
     }
@@ -174,6 +208,7 @@
           display: block;
           position: relative;
           width: 90%;
+          height: auto;
           padding: 20px 0;
           margin: 0px auto;
           border-top: 1px solid lightgrey;
@@ -183,10 +218,13 @@
 
 
           div.technos{
+              position: relative;
               width: 35%;
+              height: auto;
               margin-left: 5%;
               text-align: right;
               border-right: 1px solid lightgrey;
+              box-sizing: content-box;
 
               p {
                 display: block;
@@ -212,7 +250,9 @@
                   font-weight: bold;
                 }
                 img {
+                  position: relative;
                   display: inline-block;
+                  height: 25px;
                   margin: 0;
                   vertical-align: middle;
                   margin-left: 10px;
@@ -227,15 +267,17 @@
             width: 51%;
             vertical-align: top;
             padding-left: 3%;
+            text-align: left;
 
             a{
               display: inline-block;
               height: 30px;
               vertical-align: middle;
+              margin: 0;
 
               i{
                 display: inline-block;
-                height: 30px;
+                height: 22px;
                 font-size: 22px;
                 margin-bottom: 10px;
                 vertical-align: middle;
@@ -249,8 +291,9 @@
               font-size: 16px;
               font-weight: bold;
               margin-right: 0;
-              margin-bottom: 23px;
-              vertical-align: middle;
+              margin-bottom: 8px;
+              margin-top: 8px;
+              vertical-align: baseline;
               width: 92%;
               color: #333332;
 
@@ -266,14 +309,19 @@
                 margin: 0;
               }
 
+
+
               &:last-child{
                 vertical-align: top;
                 text-align: left;
                 width: 80%;
                 color: #333332;
                 margin-bottom: 0px;
-                margin-top: -10px;
                 vertical-align: middle;
+              }
+
+              &:first-child{
+                margin-bottom: 0px;
               }
             }
           }
