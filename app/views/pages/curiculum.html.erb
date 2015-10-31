@@ -43,9 +43,9 @@
         <% @formations.each do |formation| %>
         <li>
           <article>
-          <h4> <%= formation.startdate %> / <%= formation.enddate %> </h4>
+          <h4> Du <%= formation.startdate %> au <%= formation.enddate %> </h4>
           <h3> <%= formation.name %> </h3>
-          <h4> <%= formation.institution %> <a href="http://<%= formation.url %>"  title="Aller sur le site de <%= formation.institution %>"> <i class="fa fa-eye"></i> </a> </h4>
+          <h4> <%= formation.institution %> <a href="http://<%= formation.url.split(" ")[1] %>"  title="Aller sur le site de <%= formation.institution %>"> <i class="fa fa-eye"></i> </a> </h4>
           <p> <%= formation.skills %> </p>
           <p> <%= formation.certificate %> </p>
           </article>
@@ -87,5 +87,5 @@
       </ul>
     </div>
   </div>
-  
+
 </main>
