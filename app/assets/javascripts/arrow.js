@@ -38,7 +38,7 @@ $( document ).ready(function() {
   }, 500);
 
   setInterval(function(){
-    $arrow.style.textShadow = ""
+    $arrow.style.textShadow = "";
     $arrow.style.textShadow = "0px 0px 1px rgba(6,170,231,0)";
   }, 1000);
 
