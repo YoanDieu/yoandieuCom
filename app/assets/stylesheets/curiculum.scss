@@ -97,6 +97,16 @@ main.curriculum{
         line-height: 1;
         margin-bottom: 20px;
 
+        a{
+          color: #06aae7;
+          border-bottom: 1px solid white;
+          transition: all ease 0.5s;
+
+          &:hover {
+            border-bottom: 1px solid #06aae7;
+          }
+        }
+
         span.cyan{
           display: inline-block;
           color: #06aae7;
@@ -509,6 +519,45 @@ nav#cv {
       width: 50%;
       margin-left: auto;
       margin-right: auto;
+
+      div.formations{
+        ul{
+          li{
+            article{
+              p{
+                font-size: 18px;
+              }
+            }
+          }
+        }
+      }
+
+      div.experiences{
+        ul{
+          li{
+            article{
+              p{
+                font-size: 18px;
+              }
+            }
+          }
+        }
+      }
+
+      div.activites{
+        ul{
+          li{
+            article{
+              p{
+                font-size: 18px;
+              }
+            }
+          }
+        }
+      }
+
+
+
     }
   }
 
