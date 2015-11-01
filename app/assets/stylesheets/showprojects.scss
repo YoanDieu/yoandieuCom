@@ -154,9 +154,11 @@
       a{
         text-decoration: none;
         transition: all ease 0.5s;
+        color: #06aae7;
 
         &:hover{
           text-decoration: underline;
+          color: #06aae7;
         }
       }
 
