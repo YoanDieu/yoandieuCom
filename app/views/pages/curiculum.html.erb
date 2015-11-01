@@ -62,7 +62,7 @@
         <% @experiences.each do |experience| %>
           <li>
             <article>
-              <h4> <%= experience.startdate %> / <%= experience.enddate %> </h4>
+              <h4> <%= experience.startdate %> au <%= experience.enddate %> </h4>
               <h3> <%= experience.position %> </h3>
               <h4> <%= experience.company %> (<%= experience.location %>)
                 <%= link_to("#{experience.url}", html_options = {title: "Aller sur le site de #{experience.company}"}) do %> <i class="fa fa-eye"></i><% end %>
