@@ -45,7 +45,9 @@
           <article>
           <h4> Du <%= formation.startdate %> au <%= formation.enddate %> </h4>
           <h3> <%= formation.name %> </h3>
-          <h4> <%= formation.institution %> <a href="http://<%= formation.url.split(" ")[1] %>"  title="Aller sur le site de <%= formation.institution %>"> <i class="fa fa-eye"></i> </a> </h4>
+          <h4> <%= formation.institution %>
+            <%= link_to("#{formation.url}", html_options = {title: "Aller sur le site de #{formation.institution.split(" ")[1] }"}) do %> <i class="fa fa-eye"></i><% end %>
+          </h4>
           <p> <%= formation.skills %> </p>
           <p> <%= formation.certificate %> </p>
           </article>
@@ -62,7 +64,10 @@
             <article>
               <h4> <%= experience.startdate %> / <%= experience.enddate %> </h4>
               <h3> <%= experience.position %> </h3>
-              <h4> <%= experience.company %> (<%= experience.location %>) <a href="http://<%= experience.url %>"> <i class="fa fa-eye"></i> </a></h4>
+              <h4> <%= experience.company %> (<%= experience.location %>)
+                <%= link_to("#{experience.url}", html_options = {title: "Aller sur le site de #{experience.company}"}) do %> <i class="fa fa-eye"></i><% end %>
+                <a href="http://<%= experience.url %>"> <i class="fa fa-eye"></i> </a>
+              </h4>
               <p> <%= experience.duties %> </p>
 
             </article>
@@ -78,7 +83,9 @@
         <li>
           <article>
             <h3> <%= activity.title %> </h3>
-            <h4> <%= activity.kind %> <a href="http://<%= activity.url %>"> <i class="fa fa-eye"></i> </a></h4>
+            <h4> <%= activity.kind %>
+              <%= link_to("#{activity.url}", html_options = {title: "Aller sur le site de #{activity.institution}"}) do %> <i class="fa fa-eye"></i><% end %>
+            </h4>
             <p> <%= activity.institution %> </p>
             <p> <%= activity.description %> </p>
           </article>
