@@ -28,9 +28,24 @@
         <% end %>
       </div>
       <div class="links">
-        <%= link_to("#{@project.github}", html_options = {title: "Voir le repo Github"}) do %> <i class='fa fa-github'></i><% end %> <p> Voir sur Github: <% if @project.github.length > 0 %><span><%= @project.github %></span> <% end %></p>
-        <%= link_to("#{@project.twitter}", html_options = {title: "Voir le compte twitter"}) do %> <i class="fa fa-twitter"></i><% end %> <p> Voir sur twitter: <% if @project.twitter.length > 0 %><span><%= @project.twitter %></span><% end %></p>
-        <%= link_to("#{@project.url}", html_options = {title: "Voir le site"}) do %> <i class="fa fa-link"></i><% end %>  <p> Voir sur le web: <% if @project.url.length > 0 %><span><%= @project.url %></span><% end %></p>
+        <% if @project.github.length > 0 %>
+          <%= link_to("#{@project.github}", html_options = {title: "Voir le repo Github"}) do %>
+            <i class='fa fa-github'></i>
+          <% end %>
+          <p> Voir sur Github: <span><%= @project.github %></span> </p>
+        <% end %>
+        <% if @project.twitter.length > 0 %>
+          <%= link_to("#{@project.twitter}", html_options = {title: "Voir le compte twitter"}) do %>
+            <i class="fa fa-twitter"></i>
+          <% end %>
+          <p> Voir sur twitter: <span><%= @project.twitter %></span></p>
+        <% end %>
+        <% if @project.url.length > 0 %>
+          <%= link_to("#{@project.url}", html_options = {title: "Voir le site"}) do %>
+            <i class="fa fa-link"></i>
+          <% end %>
+          <p> Voir sur le web: <span><%= @project.url %></span></p>
+        <% end %>
       </div>
 
     </div>
