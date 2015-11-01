@@ -151,6 +151,16 @@
       font-size: 16px;
       line-height: 2;
 
+      a{
+        text-decoration: none;
+        transition: all ease 0.5s;
+
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+
+
       span{
         font-weight: bold;
         font-size: 18px;
