@@ -11,6 +11,7 @@ document.getElementById("experiences") != null && document.getElementById("activ
     $activites = document.getElementById("activites");
     $cvWarper = document.getElementById('cvWarper');
     $cvWarper.style.overflow = "hidden";
+    $cvWarper.style.paddingBottom = "200px";
     $experiencesBtn.style.border = "none";
     $experiencesBtn.style.borderBottom = "2px solid #06aae7";
     $experiencesBtn.style.color = "#06aae7";
@@ -21,15 +22,15 @@ document.getElementById("experiences") != null && document.getElementById("activ
 
     $experiencesBtn.style.backgroundColor = "white";
 
-    if (getComputedStyle($formations.firstChild.nextSibling.nextSibling.nextSibling).height > getComputedStyle($experiences.firstChild.nextSibling.nextSibling.nextSibling).height || getComputedStyle($formations.firstChild.nextSibling.nextSibling.nextSibling).height > getComputedStyle($activites.firstChild.nextSibling.nextSibling.nextSibling).height) {
-      $cvWarper.style.height = getComputedStyle($formations.firstChild.nextSibling.nextSibling.nextSibling).height;
-      console.log(getComputedStyle($formations.firstChild.nextSibling.nextSibling.nextSibling).height);
+    if (getComputedStyle($formations.firstChild.nextSibling.nextSibling.nextSibling).height > getComputedStyle($experiences.firstChild.nextSibling.nextSibling.nextSibling).height || getComputedStyle($formations.firstChild.nextSibling.nextSibling.nextSibling).height > getComputedStyle($activites.firstChild.nextSibling.nextSibling.nextSibling).height){
+      $cvWarper.style.height = ((40 * $formations.firstChild.nextSibling.nextSibling.nextSibling.childNodes.length ) + parseInt(getComputedStyle($formations.firstChild.nextSibling.nextSibling.nextSibling).height[0] + getComputedStyle($formations.firstChild.nextSibling.nextSibling.nextSibling).height[1] + getComputedStyle($formations.firstChild.nextSibling.nextSibling.nextSibling).height[2] )) + "px";
+      console.log(getComputedStyle($formations.firstChild.nextSibling.nextSibling.nextSibling).height[0] + getComputedStyle($formations.firstChild.nextSibling.nextSibling.nextSibling).height[1] + getComputedStyle($formations.firstChild.nextSibling.nextSibling.nextSibling).height[2]);
     } else if (getComputedStyle($experiences.firstChild.nextSibling.nextSibling.nextSibling).height > getComputedStyle($formations.firstChild.nextSibling.nextSibling.nextSibling).height ||getComputedStyle($experiences.firstChild.nextSibling.nextSibling.nextSibling).height > getComputedStyle($activites.firstChild.nextSibling.nextSibling.nextSibling).height) {
-      $cvWarper.style.height = getComputedStyle($experiences.firstChild.nextSibling.nextSibling.nextSibling).height;
-      console.log(getComputedStyle($experiences.firstChild.nextSibling.nextSibling.nextSibling).height);
+      $cvWarper.style.height = ((40 * $experiences.firstChild.nextSibling.nextSibling.nextSibling.childNodes.length ) + parseInt(getComputedStyle($experiences.firstChild.nextSibling.nextSibling.nextSibling).height[0] + getComputedStyle($experiences.firstChild.nextSibling.nextSibling.nextSibling).height[1] + getComputedStyle($experiences.firstChild.nextSibling.nextSibling.nextSibling).height[2] )) + "px";
+      console.log(getComputedStyle($experiences.firstChild.nextSibling.nextSibling.nextSibling).height[0] + getComputedStyle($experiences.firstChild.nextSibling.nextSibling.nextSibling).height[1] + getComputedStyle($experiences.firstChild.nextSibling.nextSibling.nextSibling).height[2] );
     } else if (getComputedStyle($activites.firstChild.nextSibling.nextSibling.nextSibling).height > getComputedStyle($formations.firstChild.nextSibling.nextSibling.nextSibling).height || getComputedStyle($activites.firstChild.nextSibling.nextSibling.nextSibling).height > getComputedStyle($experiences.firstChild.nextSibling.nextSibling.nextSibling).height) {
-      $cvWarper.style.height = getComputedStyle($activites.firstChild.nextSibling.nextSibling.nextSibling).height;
-      console.log(getComputedStyle($activites.firstChild.nextSibling.nextSibling.nextSibling).height);
+      $cvWarper.style.height = ((40 * $activites.firstChild.nextSibling.nextSibling.nextSibling.childNodes.length ) + parseInt(getComputedStyle($activites.firstChild.nextSibling.nextSibling.nextSibling).height[0] + getComputedStyle($activites.firstChild.nextSibling.nextSibling.nextSibling).height[1] + getComputedStyle($activites.firstChild.nextSibling.nextSibling.nextSibling).height[2])) + "px";
+      console.log(getComputedStyle($activites.firstChild.nextSibling.nextSibling.nextSibling).height[0] + getComputedStyle($activites.firstChild.nextSibling.nextSibling.nextSibling).height[1] + getComputedStyle($activites.firstChild.nextSibling.nextSibling.nextSibling).height[2]);
     }
 
     function setActive() {
