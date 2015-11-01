@@ -66,7 +66,6 @@
               <h3> <%= experience.position %> </h3>
               <h4> <%= experience.company %> (<%= experience.location %>)
                 <%= link_to("#{experience.url}", html_options = {title: "Aller sur le site de #{experience.company}"}) do %> <i class="fa fa-eye"></i><% end %>
-                <a href="http://<%= experience.url %>"> <i class="fa fa-eye"></i> </a>
               </h4>
               <p> <%= experience.duties %> </p>
 
