@@ -19,4 +19,3 @@ function toggleMenu() {
 
 
   $burgerBtn.addEventListener('click', toggleMenu, false);
-  $burgerBtn.addEventListener('touch', toggleMenu, false);
