@@ -84,6 +84,7 @@ main.home {
             margin-top: 0;
             transition: all ease 1s;
 
+
             p{
               display: block;
               width: 60%;
@@ -136,10 +137,16 @@ main.home {
               line-height: 0.5;
               font-size: 40px;
             }
+
+            &.guillemet{
+              font-size: 40px;
+              text-align: right;
+            }
             &:last-child {
               display: block;
               text-align: right;
-              font-size: 40px;
+              font-size: 16px;
+              color: #999997;
               line-height: 0.5;
               margin: 0;
             }
@@ -311,6 +318,11 @@ main.home {
               margin-top: -10px;
               line-height: 1.2;
 
+              &.guillemet{
+                font-size: 40px;
+                text-align: right;
+              }
+
               &:first-child{
                 margin: 0;
                 line-height: 0.5;
@@ -319,7 +331,8 @@ main.home {
               &:last-child {
                 display: block;
                 text-align: right;
-                font-size: 40px;
+                color: #999997;
+                font-size: 16px;
                 line-height: 0.5;
                 margin: 0;
               }
