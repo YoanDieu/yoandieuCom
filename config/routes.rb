@@ -28,7 +28,7 @@ Rails.application.routes.draw do
 
   get '/projects' => "pages#projects"
   get '/project/:id' => "pages#show_project"
-  get '/curiculum' => "pages#curiculum"
+  get '/curriculum' => "pages#curriculum"
   get '/contact' => "pages#contact"
   post '/contact' => "pages#contact_send"
 

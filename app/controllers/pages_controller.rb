@@ -8,7 +8,7 @@ class PagesController < ApplicationController
     @projects = Project.all
   end
 
-  def curiculum
+  def curriculum
     @curi = true
     @formations = Formation.all.reverse
     @experiences = Experience.all.reverse
