@@ -27,10 +27,10 @@
           <div class="intel">
             <div class="social">
               <div class="iconContainer">
-                <%= link_to("www.#{project.github}", html_options = {title: "Voir le repo Github"}) do %> <i class='fa fa-github'></i><% end %>
+                <%= link_to("#{project.github}", html_options = {title: "Voir le repo Github"}) do %> <i class='fa fa-github'></i><% end %>
               </div>
               <div class="iconContainer">
-                <%= link_to("www.#{project.twitter}", html_options = {title: "Voir sur Twitter"}) do %> <i class="fa fa-twitter"></i><% end %>
+                <%= link_to("#{project.twitter}", html_options = {title: "Voir sur Twitter"}) do %> <i class="fa fa-twitter"></i><% end %>
               </div>
               <div class="iconContainer">
                 <%= link_to("/project/#{project.id}", html_options = {title: "Plus d'infos"}) do %> <i class="fa fa-info-circle"></i><% end %>
